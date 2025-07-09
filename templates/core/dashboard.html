@@ -1,0 +1,623 @@
+{% load static %}
+
+{% block title %}Network Automation Dashboard - Odinsight{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Workflow Builder Styles */
+    .workflow-container {
+        height: calc(100vh - 200px);
+        min-height: 600px;
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .workflow-toolbar {
+        background: white;
+        border-bottom: 1px solid #dee2e6;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .workflow-canvas {
+        height: calc(100% - 60px);
+        background: 
+            radial-gradient(circle, #e9ecef 1px, transparent 1px);
+        background-size: 20px 20px;
+        position: relative;
+    }
+    
+    .workflow-sidebar {
+        position: absolute;
+        left: 0;
+        top: 60px;
+        bottom: 0;
+        width: 280px;
+        background: white;
+        border-right: 1px solid #dee2e6;
+        z-index: 10;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .workflow-sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .stencil-container {
+        padding: 20px;
+    }
+    
+    .stencil-group {
+        margin-bottom: 25px;
+    }
+    
+    .stencil-group-title {
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #495057;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .stencil-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .stencil-item {
+        background: white;
+        border: 2px solid #e9ecef;
+        border-radius: 6px;
+        padding: 15px;
+        text-align: center;
+        cursor: grab;
+        transition: all 0.2s ease;
+        position: relative;
+    }
+    
+    .stencil-item:hover {
+        border-color: #3498db;
+        box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+        transform: translateY(-1px);
+    }
+    
+    .stencil-item:active {
+        cursor: grabbing;
+    }
+    
+    .stencil-item i {
+        font-size: 24px;
+        margin-bottom: 8px;
+        display: block;
+    }
+    
+    .stencil-item span {
+        font-size: 11px;
+        font-weight: 500;
+        color: #6c757d;
+        line-height: 1.2;
+    }
+    
+    /* Network Device Colors */
+    .device-server i { color: #3498db; }
+    .device-router i { color: #e67e22; }
+    .device-switch i { color: #27ae60; }
+    .device-firewall i { color: #e74c3c; }
+    .device-cloud i { color: #9b59b6; }
+    .device-database i { color: #34495e; }
+    
+    /* Ansible Colors */
+    .ansible-playbook i { color: #ee0000; }
+    .ansible-task i { color: #ff6b6b; }
+    .ansible-inventory i { color: #ff9f43; }
+    .ansible-role i { color: #feca57; }
+    
+    /* Flow Control Colors */
+    .flow-start i { color: #00d2d3; }
+    .flow-decision i { color: #ff9ff3; }
+    .flow-process i { color: #54a0ff; }
+    .flow-end i { color: #5f27cd; }
+    
+    .properties-panel {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        bottom: 0;
+        width: 300px;
+        background: white;
+        border-left: 1px solid #dee2e6;
+        z-index: 10;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+    }
+    
+    .properties-panel.show {
+        transform: translateX(0);
+    }
+    
+    .properties-content {
+        padding: 20px;
+    }
+    
+    .btn-workflow {
+        background: white;
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        padding: 8px 16px;
+        font-size: 13px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+    
+    .btn-workflow:hover {
+        border-color: #3498db;
+        background: #f8f9fa;
+    }
+    
+    .btn-workflow.active {
+        background: #3498db;
+        border-color: #3498db;
+        color: white;
+    }
+    
+    .workflow-stats {
+        display: flex;
+        gap: 20px;
+        font-size: 13px;
+        color: #6c757d;
+    }
+    
+    .workflow-stats span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .minimap {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 200px;
+        height: 120px;
+        background: white;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        z-index: 5;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .workflow-toolbar {
+            padding: 10px;
+        }
+        
+        .workflow-sidebar,
+        .properties-panel {
+            width: 100%;
+        }
+        
+        .minimap {
+            display: none;
+        }
+        
+        .workflow-stats {
+            display: none;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content_body %}
+<div class="container-fluid">
+    <!-- Page Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="h3 mb-2">Network Automation Workflow Builder</h1>
+                    <p class="text-muted mb-0">Design and orchestrate your network automation workflows with Ansible Tower integration</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary btn-sm" id="saveWorkflow">
+                        <i class="ph-floppy-disk me-1"></i> Save
+                    </button>
+                    <button class="btn btn-outline-success btn-sm" id="runWorkflow">
+                        <i class="ph-play me-1"></i> Execute
+                    </button>
+                    <button class="btn btn-primary btn-sm" id="deployWorkflow">
+                        <i class="ph-cloud-arrow-up me-1"></i> Deploy
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Workflow Container -->
+    <div class="row">
+        <div class="col-12">
+            <div class="workflow-container">
+                <!-- Toolbar -->
+                <div class="workflow-toolbar">
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn-workflow" id="toggleStencil">
+                            <i class="ph-sidebar-simple me-1"></i> Components
+                        </button>
+                        <button class="btn-workflow" id="zoomIn">
+                            <i class="ph-magnifying-glass-plus"></i>
+                        </button>
+                        <button class="btn-workflow" id="zoomOut">
+                            <i class="ph-magnifying-glass-minus"></i>
+                        </button>
+                        <button class="btn-workflow" id="zoomToFit">
+                            <i class="ph-crop"></i>
+                        </button>
+                        <div class="vr mx-2"></div>
+                        <button class="btn-workflow" id="undoAction">
+                            <i class="ph-arrow-counter-clockwise"></i>
+                        </button>
+                        <button class="btn-workflow" id="redoAction">
+                            <i class="ph-arrow-clockwise"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="workflow-stats">
+                        <span><i class="ph-squares-four"></i> 0 Nodes</span>
+                        <span><i class="ph-arrows-horizontal"></i> 0 Connections</span>
+                        <span><i class="ph-clock"></i> Ready</span>
+                    </div>
+                    
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn-workflow" id="validateWorkflow">
+                            <i class="ph-check-circle me-1"></i> Validate
+                        </button>
+                        <button class="btn-workflow" id="toggleProperties">
+                            <i class="ph-gear me-1"></i> Properties
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stencil Sidebar -->
+                <div class="workflow-sidebar" id="stencilSidebar">
+                    <div class="stencil-container">
+                        <!-- Network Devices -->
+                        <div class="stencil-group">
+                            <div class="stencil-group-title">Network Devices</div>
+                            <div class="stencil-items">
+                                <div class="stencil-item device-server" data-type="server">
+                                    <i class="ph-desktop"></i>
+                                    <span>Server</span>
+                                </div>
+                                <div class="stencil-item device-router" data-type="router">
+                                    <i class="ph-router"></i>
+                                    <span>Router</span>
+                                </div>
+                                <div class="stencil-item device-switch" data-type="switch">
+                                    <i class="ph-switch"></i>
+                                    <span>Switch</span>
+                                </div>
+                                <div class="stencil-item device-firewall" data-type="firewall">
+                                    <i class="ph-shield-check"></i>
+                                    <span>Firewall</span>
+                                </div>
+                                <div class="stencil-item device-cloud" data-type="cloud">
+                                    <i class="ph-cloud"></i>
+                                    <span>Cloud</span>
+                                </div>
+                                <div class="stencil-item device-database" data-type="database">
+                                    <i class="ph-database"></i>
+                                    <span>Database</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ansible Components -->
+                        <div class="stencil-group">
+                            <div class="stencil-group-title">Ansible Tower</div>
+                            <div class="stencil-items">
+                                <div class="stencil-item ansible-playbook" data-type="playbook">
+                                    <i class="ph-file-text"></i>
+                                    <span>Playbook</span>
+                                </div>
+                                <div class="stencil-item ansible-task" data-type="task">
+                                    <i class="ph-list-checks"></i>
+                                    <span>Task</span>
+                                </div>
+                                <div class="stencil-item ansible-inventory" data-type="inventory">
+                                    <i class="ph-tree-structure"></i>
+                                    <span>Inventory</span>
+                                </div>
+                                <div class="stencil-item ansible-role" data-type="role">
+                                    <i class="ph-user-gear"></i>
+                                    <span>Role</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Flow Control -->
+                        <div class="stencil-group">
+                            <div class="stencil-group-title">Flow Control</div>
+                            <div class="stencil-items">
+                                <div class="stencil-item flow-start" data-type="start">
+                                    <i class="ph-play-circle"></i>
+                                    <span>Start</span>
+                                </div>
+                                <div class="stencil-item flow-decision" data-type="decision">
+                                    <i class="ph-diamond"></i>
+                                    <span>Decision</span>
+                                </div>
+                                <div class="stencil-item flow-process" data-type="process">
+                                    <i class="ph-rectangle"></i>
+                                    <span>Process</span>
+                                </div>
+                                <div class="stencil-item flow-end" data-type="end">
+                                    <i class="ph-stop-circle"></i>
+                                    <span>End</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Canvas -->
+                <div class="workflow-canvas" id="workflowCanvas">
+                    <!-- JointJS Paper will be rendered here -->
+                </div>
+
+                <!-- Properties Panel -->
+                <div class="properties-panel" id="propertiesPanel">
+                    <div class="properties-content">
+                        <h6 class="fw-semibold mb-3">Element Properties</h6>
+                        <div id="propertiesForm">
+                            <div class="alert alert-info" role="alert">
+                                <i class="ph-info me-2"></i>
+                                Select an element to view its properties
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Minimap -->
+                <div class="minimap" id="minimap">
+                    <!-- Minimap content will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="ph-file-plus display-6 text-primary mb-3"></i>
+                    <h6 class="card-title">New Workflow</h6>
+                    <p class="card-text small text-muted">Create a new automation workflow from scratch</p>
+                    <button class="btn btn-outline-primary btn-sm">Create</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="ph-download display-6 text-success mb-3"></i>
+                    <h6 class="card-title">Import Template</h6>
+                    <p class="card-text small text-muted">Import existing Ansible playbooks and workflows</p>
+                    <button class="btn btn-outline-success btn-sm">Import</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="ph-chart-line display-6 text-warning mb-3"></i>
+                    <h6 class="card-title">Analytics</h6>
+                    <p class="card-text small text-muted">View workflow execution metrics and performance</p>
+                    <button class="btn btn-outline-warning btn-sm">View</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="ph-gear display-6 text-info mb-3"></i>
+                    <h6 class="card-title">Settings</h6>
+                    <p class="card-text small text-muted">Configure Ansible Tower connection and preferences</p>
+                    <button class="btn btn-outline-info btn-sm">Configure</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Workflow Builder JavaScript
+class NetworkWorkflowBuilder {
+    constructor() {
+        this.paper = null;
+        this.graph = null;
+        this.selectedElement = null;
+        this.init();
+    }
+
+    init() {
+        console.log('🚀 Initializing Network Workflow Builder...');
+        this.setupCanvas();
+        this.setupEventListeners();
+        this.setupStencil();
+        this.loadSampleWorkflow();
+    }
+
+    setupCanvas() {
+        // For now, we'll create a placeholder canvas
+        const canvas = document.getElementById('workflowCanvas');
+        canvas.innerHTML = `
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #6c757d;">
+                <i class="ph-diagram-project" style="font-size: 4rem; margin-bottom: 1rem; display: block;"></i>
+                <h5>Workflow Canvas</h5>
+                <p>Drag components from the sidebar to start building your workflow</p>
+                <small>JointJS+ integration coming soon</small>
+            </div>
+        `;
+    }
+
+    setupEventListeners() {
+        // Toggle stencil sidebar
+        document.getElementById('toggleStencil').addEventListener('click', () => {
+            const sidebar = document.getElementById('stencilSidebar');
+            sidebar.classList.toggle('show');
+        });
+
+        // Toggle properties panel
+        document.getElementById('toggleProperties').addEventListener('click', () => {
+            const panel = document.getElementById('propertiesPanel');
+            panel.classList.toggle('show');
+        });
+
+        // Workflow actions
+        document.getElementById('saveWorkflow').addEventListener('click', () => {
+            this.saveWorkflow();
+        });
+
+        document.getElementById('runWorkflow').addEventListener('click', () => {
+            this.executeWorkflow();
+        });
+
+        document.getElementById('deployWorkflow').addEventListener('click', () => {
+            this.deployWorkflow();
+        });
+
+        document.getElementById('validateWorkflow').addEventListener('click', () => {
+            this.validateWorkflow();
+        });
+
+        // Zoom controls
+        document.getElementById('zoomIn').addEventListener('click', () => {
+            console.log('Zoom in');
+        });
+
+        document.getElementById('zoomOut').addEventListener('click', () => {
+            console.log('Zoom out');
+        });
+
+        document.getElementById('zoomToFit').addEventListener('click', () => {
+            console.log('Zoom to fit');
+        });
+
+        // Undo/Redo
+        document.getElementById('undoAction').addEventListener('click', () => {
+            console.log('Undo');
+        });
+
+        document.getElementById('redoAction').addEventListener('click', () => {
+            console.log('Redo');
+        });
+    }
+
+    setupStencil() {
+        // Add drag and drop functionality to stencil items
+        const stencilItems = document.querySelectorAll('.stencil-item');
+        stencilItems.forEach(item => {
+            item.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', item.dataset.type);
+                console.log('Dragging:', item.dataset.type);
+            });
+            
+            item.addEventListener('click', () => {
+                console.log('Clicked:', item.dataset.type);
+                this.addElementToCanvas(item.dataset.type);
+            });
+        });
+
+        // Make stencil items draggable
+        stencilItems.forEach(item => {
+            item.draggable = true;
+        });
+    }
+
+    addElementToCanvas(type) {
+        console.log(`Adding ${type} to canvas`);
+        // This will be implemented with JointJS+
+        this.showNotification(`Added ${type} to workflow`, 'success');
+        this.updateStats();
+    }
+
+    saveWorkflow() {
+        console.log('Saving workflow...');
+        this.showNotification('Workflow saved successfully', 'success');
+    }
+
+    executeWorkflow() {
+        console.log('Executing workflow...');
+        this.showNotification('Workflow execution started', 'info');
+    }
+
+    deployWorkflow() {
+        console.log('Deploying workflow...');
+        this.showNotification('Workflow deployed to Ansible Tower', 'success');
+    }
+
+    validateWorkflow() {
+        console.log('Validating workflow...');
+        this.showNotification('Workflow validation passed', 'success');
+    }
+
+    loadSampleWorkflow() {
+        // Load a sample workflow for demonstration
+        console.log('Loading sample workflow...');
+        setTimeout(() => {
+            this.updateStats(3, 2);
+            this.showNotification('Sample workflow loaded', 'info');
+        }, 1000);
+    }
+
+    updateStats(nodes = 0, connections = 0) {
+        const statsElement = document.querySelector('.workflow-stats');
+        if (statsElement) {
+            statsElement.innerHTML = `
+                <span><i class="ph-squares-four"></i> ${nodes} Nodes</span>
+                <span><i class="ph-arrows-horizontal"></i> ${connections} Connections</span>
+                <span><i class="ph-clock"></i> Ready</span>
+            `;
+        }
+    }
+
+    showNotification(message, type = 'info') {
+        // Create a toast notification
+        const toast = document.createElement('div');
+        toast.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+        toast.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+        toast.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        `;
+        
+        document.body.appendChild(toast);
+        
+        // Auto remove after 3 seconds
+        setTimeout(() => {
+            if (toast.parentNode) {
+                toast.parentNode.removeChild(toast);
+            }
+        }, 3000);
+    }
+}
+
+// Initialize the workflow builder when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    window.workflowBuilder = new NetworkWorkflowBuilder();
+});
+</script>
+{% endblock %}
