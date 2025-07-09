@@ -1,0 +1,239 @@
+
+<!-- templates/dashboard/index.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard - Odinsight{% endblock %}
+{% block page_icon %}icon-home4{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+{% block page_subtitle %}Network Overview{% endblock %}
+
+{% block page_actions %}
+<div class="d-flex justify-content-center">
+    <a href="#" class="btn btn-link btn-float font-size-sm text-default">
+        <i class="icon-reload-alt text-primary"></i><span>Refresh</span>
+    </a>
+    <a href="#" class="btn btn-link btn-float font-size-sm text-default">
+        <i class="icon-cog5 text-primary"></i> <span>Settings</span>
+    </a>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Statistics cards -->
+<div class="row">
+    <div class="col-sm-6 col-xl-3">
+        <div class="card card-body bg-blue-400 has-bg-image">
+            <div class="media">
+                <div class="media-body">
+                    <h3 class="mb-0">156</h3>
+                    <span class="text-uppercase font-size-xs">Total Devices</span>
+                </div>
+
+                <div class="ml-3 align-self-center">
+                    <i class="icon-server icon-3x opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card card-body bg-success-400 has-bg-image">
+            <div class="media">
+                <div class="media-body">
+                    <h3 class="mb-0">23</h3>
+                    <span class="text-uppercase font-size-xs">Active Workflows</span>
+                </div>
+
+                <div class="ml-3 align-self-center">
+                    <i class="icon-git-branch icon-3x opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card card-body bg-warning-400 has-bg-image">
+            <div class="media">
+                <div class="media-body">
+                    <h3 class="mb-0">1,247</h3>
+                    <span class="text-uppercase font-size-xs">Backup Files</span>
+                </div>
+
+                <div class="ml-3 align-self-center">
+                    <i class="icon-database icon-3x opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card card-body bg-teal-400 has-bg-image">
+            <div class="media">
+                <div class="media-body">
+                    <h3 class="mb-0">98.5%</h3>
+                    <span class="text-uppercase font-size-xs">System Health</span>
+                </div>
+
+                <div class="ml-3 align-self-center">
+                    <i class="icon-pulse2 icon-3x opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /statistics cards -->
+
+<!-- Dashboard widgets -->
+<div class="row">
+    <div class="col-xl-8">
+        <!-- Network Status -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Network Device Status</h5>
+                <div class="header-elements">
+                    <div class="list-icons">
+                        <a class="list-icons-item" data-action="collapse"></a>
+                        <a class="list-icons-item" data-action="reload"></a>
+                        <a class="list-icons-item" data-action="remove"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="chart-container">
+                    <div class="chart has-fixed-height" id="network_status_chart"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /network status -->
+    </div>
+
+    <div class="col-xl-4">
+        <!-- Recent Activities -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Recent Activities</h5>
+                <div class="header-elements">
+                    <span class="badge bg-success">Live</span>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <ul class="media-list">
+                    <li class="media">
+                        <div class="mr-3">
+                            <a href="#" class="btn bg-success-400 rounded-round btn-icon btn-sm">
+                                <span class="letter-icon">B</span>
+                            </a>
+                        </div>
+
+                        <div class="media-body">
+                            <div class="media-title">
+                                <a href="#">
+                                    <span class="font-weight-semibold">Backup completed</span>
+                                    <span class="text-muted font-size-sm">Router-Core-01</span>
+                                </a>
+                            </div>
+
+                            <span class="text-muted font-size-sm">2 minutes ago</span>
+                        </div>
+                    </li>
+
+                    <li class="media">
+                        <div class="mr-3">
+                            <a href="#" class="btn bg-warning-400 rounded-round btn-icon btn-sm">
+                                <span class="letter-icon">W</span>
+                            </a>
+                        </div>
+
+                        <div class="media-body">
+                            <div class="media-title">
+                                <a href="#">
+                                    <span class="font-weight-semibold">Workflow executed</span>
+                                    <span class="text-muted font-size-sm">VLAN Configuration</span>
+                                </a>
+                            </div>
+
+                            <span class="text-muted font-size-sm">5 minutes ago</span>
+                        </div>
+                    </li>
+
+                    <li class="media">
+                        <div class="mr-3">
+                            <a href="#" class="btn bg-indigo-400 rounded-round btn-icon btn-sm">
+                                <span class="letter-icon">D</span>
+                            </a>
+                        </div>
+
+                        <div class="media-body">
+                            <div class="media-title">
+                                <a href="#">
+                                    <span class="font-weight-semibold">Device discovered</span>
+                                    <span class="text-muted font-size-sm">Switch-Access-15</span>
+                                </a>
+                            </div>
+
+                            <span class="text-muted font-size-sm">12 minutes ago</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /recent activities -->
+
+        <!-- Quick Actions -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Quick Actions</h5>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="/workflows/" class="btn btn-outline-primary btn-block">
+                            <i class="icon-git-branch mr-2"></i>
+                            New Workflow
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="/devices/" class="btn btn-outline-success btn-block">
+                            <i class="icon-server mr-2"></i>
+                            Add Device
+                        </a>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6">
+                        <a href="/backups/" class="btn btn-outline-warning btn-block">
+                            <i class="icon-database mr-2"></i>
+                            Backup Now
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="/network/" class="btn btn-outline-info btn-block">
+                            <i class="icon-tree6 mr-2"></i>
+                            View Topology
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /quick actions -->
+    </div>
+</div>
+<!-- /dashboard widgets -->
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Dashboard specific JavaScript
+$(document).ready(function() {
+    // Initialize dashboard widgets
+    console.log('Odinsight Dashboard loaded');
+    
+    // Placeholder for network status chart
+    // Will be implemented with actual data
+});
+</script>
+{% endblock %}

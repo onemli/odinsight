@@ -1,0 +1,302 @@
+<!-- templates/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Odinsight - Network Automation Platform{% endblock %}</title>
+
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/limitless/css/icomoon/styles.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/limitless/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/limitless/css/bootstrap_limitless.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/limitless/css/layout.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/limitless/css/components.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/limitless/css/colors.min.css' %}" rel="stylesheet" type="text/css">
+    
+    <!-- JointJS+ CSS -->
+    <link href="{% static 'vendor/jointjs/joint.css' %}" rel="stylesheet" type="text/css">
+    
+    <!-- Custom CSS -->
+    <link href="{% static 'css/odinsight.css' %}" rel="stylesheet" type="text/css">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <!-- Main navbar -->
+    <div class="navbar navbar-expand-md navbar-dark">
+        <div class="navbar-brand">
+            <a href="/" class="d-inline-block">
+                <i class="icon-network mr-2"></i>
+                <span class="font-weight-bold">Odinsight</span>
+            </a>
+        </div>
+
+        <div class="d-md-none">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+                <i class="icon-tree5"></i>
+            </button>
+            <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+                <i class="icon-paragraph-justify3"></i>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-mobile">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+                        <i class="icon-paragraph-justify3"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <span class="badge bg-success ml-md-3 mr-md-auto">Network Automation Platform</span>
+
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown dropdown-user">
+                    <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+                        <img src="{% static 'images/placeholder.jpg' %}" class="rounded-circle mr-2" height="34" alt="">
+                        <span>{% if user.is_authenticated %}{{ user.username }}{% else %}Guest{% endif %}</span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        {% if user.is_authenticated %}
+                            <a href="/users/profile/" class="dropdown-item">
+                                <i class="icon-user-plus"></i> My profile
+                            </a>
+                            <a href="/admin/" class="dropdown-item">
+                                <i class="icon-cog5"></i> Admin Panel
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/users/logout/" class="dropdown-item">
+                                <i class="icon-switch2"></i> Logout
+                            </a>
+                        {% else %}
+                            <a href="/users/login/" class="dropdown-item">
+                                <i class="icon-enter2"></i> Login
+                            </a>
+                        {% endif %}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /main navbar -->
+
+    <!-- Page content -->
+    <div class="page-content">
+        <!-- Main sidebar -->
+        <div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+            <!-- Sidebar mobile toggler -->
+            <div class="sidebar-mobile-toggler text-center">
+                <a href="#" class="sidebar-mobile-main-toggle">
+                    <i class="icon-arrow-left8"></i>
+                </a>
+                Navigation
+                <a href="#" class="sidebar-mobile-expand">
+                    <i class="icon-screen-full"></i>
+                    <i class="icon-screen-normal"></i>
+                </a>
+            </div>
+            <!-- /sidebar mobile toggler -->
+
+            <!-- Sidebar content -->
+            <div class="sidebar-content">
+                <!-- User menu -->
+                <div class="sidebar-user">
+                    <div class="card-body">
+                        <div class="media">
+                            <div class="mr-3">
+                                <a href="#"><img src="{% static 'images/placeholder.jpg' %}" width="38" height="38" class="rounded-circle" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-title font-weight-semibold">
+                                    {% if user.is_authenticated %}{{ user.get_full_name|default:user.username }}{% else %}Guest User{% endif %}
+                                </div>
+                                <div class="font-size-xs opacity-50">
+                                    <i class="icon-pin font-size-sm"></i> &nbsp;Network Administrator
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /user menu -->
+
+                <!-- Main navigation -->
+                <div class="card card-sidebar-mobile">
+                    <ul class="nav nav-sidebar" data-nav-type="accordion">
+
+                        <!-- Main -->
+                        <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">
+                                <i class="icon-home4"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <!-- Network Management -->
+                        <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Network Management</div> <i class="icon-menu" title="Network Management"></i></li>
+                        <li class="nav-item nav-item-submenu {% if 'devices' in request.resolver_match.url_name %}nav-item-expanded nav-item-open{% endif %}">
+                            <a href="#" class="nav-link">
+                                <i class="icon-server"></i>
+                                <span>Device Management</span>
+                            </a>
+                            <ul class="nav nav-group-sub" data-submenu-title="Device Management">
+                                <li class="nav-item"><a href="/devices/" class="nav-link">All Devices</a></li>
+                                <li class="nav-item"><a href="/devices/groups/" class="nav-link">Device Groups</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Add Device</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/network/" class="nav-link {% if 'network' in request.resolver_match.url_name %}active{% endif %}">
+                                <i class="icon-tree6"></i>
+                                <span>Network Topology</span>
+                            </a>
+                        </li>
+
+                        <!-- Automation -->
+                        <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Automation</div> <i class="icon-menu" title="Automation"></i></li>
+                        <li class="nav-item nav-item-submenu {% if 'workflows' in request.resolver_match.url_name %}nav-item-expanded nav-item-open{% endif %}">
+                            <a href="#" class="nav-link">
+                                <i class="icon-git-branch"></i>
+                                <span>Workflows</span>
+                            </a>
+                            <ul class="nav nav-group-sub" data-submenu-title="Workflows">
+                                <li class="nav-item"><a href="/workflows/" class="nav-link">All Workflows</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Workflow Builder</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Executions</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/backups/" class="nav-link {% if 'backups' in request.resolver_match.url_name %}active{% endif %}">
+                                <i class="icon-database"></i>
+                                <span>Configuration Backups</span>
+                            </a>
+                        </li>
+
+                        <!-- Integration -->
+                        <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Integration</div> <i class="icon-menu" title="Integration"></i></li>
+                        <li class="nav-item nav-item-submenu {% if 'integrations' in request.resolver_match.url_name %}nav-item-expanded nav-item-open{% endif %}">
+                            <a href="#" class="nav-link">
+                                <i class="icon-puzzle4"></i>
+                                <span>External Systems</span>
+                            </a>
+                            <ul class="nav nav-group-sub" data-submenu-title="External Systems">
+                                <li class="nav-item"><a href="/integrations/netbox/" class="nav-link">NetBox</a></li>
+                                <li class="nav-item"><a href="/integrations/ansible/" class="nav-link">Ansible Tower</a></li>
+                                <li class="nav-item"><a href="/integrations/" class="nav-link">All Integrations</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Administration -->
+                        <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Administration</div> <i class="icon-menu" title="Administration"></i></li>
+                        <li class="nav-item">
+                            <a href="/admin/" class="nav-link">
+                                <i class="icon-cog5"></i>
+                                <span>System Admin</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" onclick="window.open('http://localhost:5555', '_blank')" class="nav-link">
+                                <i class="icon-alarm-check"></i>
+                                <span>Task Monitor</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /main navigation -->
+            </div>
+            <!-- /sidebar content -->
+        </div>
+        <!-- /main sidebar -->
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <!-- Page header -->
+            <div class="page-header page-header-light">
+                <div class="page-header-content header-elements-md-inline">
+                    <div class="page-title d-flex">
+                        <h4><i class="{% block page_icon %}icon-arrow-left52{% endblock %} mr-2"></i> <span class="font-weight-semibold">{% block page_title %}Odinsight{% endblock %}</span> - {% block page_subtitle %}Network Automation{% endblock %}</h4>
+                        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+                    </div>
+
+                    <div class="header-elements d-none">
+                        {% block page_actions %}
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-link btn-float font-size-sm text-default">
+                                <i class="icon-bars-alt text-primary"></i><span>Statistics</span>
+                            </a>
+                            <a href="#" class="btn btn-link btn-float font-size-sm text-default">
+                                <i class="icon-calculator text-primary"></i> <span>Invoices</span>
+                            </a>
+                            <a href="#" class="btn btn-link btn-float font-size-sm text-default">
+                                <i class="icon-calendar5 text-primary"></i> <span>Schedule</span>
+                            </a>
+                        </div>
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+            <!-- /page header -->
+
+            <!-- Content area -->
+            <div class="content">
+                {% block content %}
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Welcome to Odinsight</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Network Automation Platform</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endblock %}
+            </div>
+            <!-- /content area -->
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+    <!-- Core JS files -->
+    <script src="{% static 'vendor/limitless/js/main/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/limitless/js/main/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/limitless/js/plugins/loaders/blockui.min.js' %}"></script>
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+    <script src="{% static 'vendor/limitless/js/plugins/visualization/d3/d3.min.js' %}"></script>
+    <script src="{% static 'vendor/limitless/js/plugins/visualization/d3/d3_tooltip.js' %}"></script>
+    <script src="{% static 'vendor/limitless/js/plugins/forms/styling/switchery.min.js' %}"></script>
+    <script src="{% static 'vendor/limitless/js/plugins/forms/selects/bootstrap_multiselect.js' %}"></script>
+    <script src="{% static 'vendor/limitless/js/plugins/ui/moment/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/limitless/js/plugins/pickers/daterangepicker.js' %}"></script>
+
+    <script src="{% static 'vendor/limitless/js/app.js' %}"></script>
+    
+    <!-- JointJS+ -->
+    <script src="{% static 'vendor/jointjs/joint.js' %}"></script>
+    
+    <!-- Custom JS -->
+    <script src="{% static 'js/odinsight.js' %}"></script>
+    <!-- /theme JS files -->
+
+    {% block extra_js %}{% endblock %}
+
+</body>
+</html>

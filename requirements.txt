@@ -1,0 +1,39 @@
+Django==4.2.7
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+django-environ==0.11.2
+django-extensions==3.2.3
+django-filter==23.3
+django-crispy-forms==2.0
+crispy-bootstrap5==0.7
+
+# Database
+psycopg2-binary==2.9.9
+django-postgres-extra==2.0.8
+
+# Celery
+celery==5.3.4
+redis==5.0.1
+flower==2.0.1
+
+# Network automation
+netmiko==4.2.0
+napalm==4.1.0
+paramiko==3.3.1
+ncclient==0.6.15
+pysnmp==4.4.12
+
+# API integrations
+requests==2.31.0
+httpx==0.25.2
+
+# Utilities
+python-decouple==3.8
+PyYAML==6.0.1
+Pillow==10.1.0
+openpyxl==3.1.2
+python-dateutil==2.8.2
+
+# Development
+django-debug-toolbar==4.2.0
+ipython==8.17.2

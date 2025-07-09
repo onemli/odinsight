@@ -1,0 +1,36 @@
+FROM python:3.11-slim
+
+# System dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    postgresql-client \
+    libpq-dev \
+    openssh-client \
+    sshpass \
+    git \
+    wget \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set work directory
+WORKDIR /app
+
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy project
+COPY . .
+
+# Create necessary directories with proper permissions
+RUN mkdir -p static media logs staticfiles && \
+    chmod 755 static media logs staticfiles
+
+# Collect static files (will be overridden by volume)
+RUN python manage.py collectstatic --noinput || true
+
+# Expose port
+EXPOSE 8000
+
+# Default command
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
