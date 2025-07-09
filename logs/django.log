@@ -1,0 +1,303 @@
+INFO 2025-07-08 20:15:40,663 autoreload 7 132734004243328 Watching for file changes with StatReloader
+INFO 2025-07-08 20:17:51,647 basehttp 7 132733921650368 "GET / HTTP/1.1" 200 19
+WARNING 2025-07-08 20:18:02,936 log 7 132733921650368 Not Found: /users
+WARNING 2025-07-08 20:18:02,937 basehttp 7 132733921650368 "GET /users HTTP/1.1" 404 3666
+INFO 2025-07-08 20:18:06,896 basehttp 7 132733921650368 "GET /admin HTTP/1.1" 301 0
+INFO 2025-07-08 20:18:06,921 basehttp 7 132733921650368 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-07-08 20:18:06,990 basehttp 7 132733921650368 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-07-08 20:18:07,057 basehttp 7 132733912209088 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-07-08 20:18:07,066 basehttp 7 132733921650368 "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2025-07-08 20:18:07,067 basehttp 7 132733903816384 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-07-08 20:18:07,069 basehttp 7 132733539968704 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-07-08 20:18:07,069 basehttp 7 132733895423680 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-07-08 20:18:07,070 basehttp 7 132733548361408 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+INFO 2025-07-08 20:18:07,073 basehttp 7 132733912209088 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-07-08 20:18:10,870 basehttp 7 132733895423680 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-07-08 20:18:10,954 basehttp 7 132733895423680 "GET /admin/ HTTP/1.1" 200 11254
+INFO 2025-07-08 20:18:10,996 basehttp 7 132733895423680 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-07-08 20:18:11,016 basehttp 7 132733912209088 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-07-08 20:18:11,016 basehttp 7 132733548361408 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+ERROR 2025-07-08 20:18:13,922 log 7 132733548361408 Internal Server Error: /admin/network/routingtable/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "devices" does not exist
+LINE 1: ..."."description", "devices"."management_port" FROM "devices" ...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1926, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 836, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/views/main.py", line 122, in __init__
+    self.queryset = self.get_queryset(request)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/views/main.py", line 503, in get_queryset
+    ) = self.get_filters(request)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/views/main.py", line 182, in get_filters
+    spec = field_list_filter_class(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/filters.py", line 175, in create
+    return list_filter_class(
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/filters.py", line 188, in __init__
+    self.lookup_choices = self.field_choices(field, request, model_admin)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/filters.py", line 225, in field_choices
+    return field.get_choices(include_blank=False, ordering=ordering)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/fields/__init__.py", line 1010, in get_choices
+    (choice_func(x), str(x)) for x in qs
+                                      ^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "devices" does not exist
+LINE 1: ..."."description", "devices"."management_port" FROM "devices" ...
+                                                             ^
+
+ERROR 2025-07-08 20:18:13,929 basehttp 7 132733548361408 "GET /admin/network/routingtable/ HTTP/1.1" 500 192236
+INFO 2025-07-08 20:18:16,343 basehttp 7 132733548361408 "GET /admin/ HTTP/1.1" 200 11254
+ERROR 2025-07-08 20:18:18,162 log 7 132733548361408 Internal Server Error: /admin/devices/devicegroup/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "device_groups" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "device_groups"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1926, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 836, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/views/main.py", line 123, in __init__
+    self.get_results(request)
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/views/main.py", line 279, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/paginator.py", line 93, in count
+    return c()
+           ^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "device_groups" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "device_groups"
+                                          ^
+
+ERROR 2025-07-08 20:18:18,167 basehttp 7 132733548361408 "GET /admin/devices/devicegroup/ HTTP/1.1" 500 170590
+INFO 2025-07-08 20:18:19,978 basehttp 7 132733548361408 "GET /admin/ HTTP/1.1" 200 11254
+INFO 2025-07-08 20:54:37,019 autoreload 7 133175799786368 Watching for file changes with StatReloader
+INFO 2025-07-08 20:54:45,260 basehttp 7 133175717127872 "GET / HTTP/1.1" 200 21355
+WARNING 2025-07-08 20:54:45,341 basehttp 7 133175691949760 "GET /static/vendor/limitless/css/layout.min.css HTTP/1.1" 404 1969
+WARNING 2025-07-08 20:54:45,344 basehttp 7 133175708735168 "GET /static/vendor/limitless/css/bootstrap.min.css HTTP/1.1" 404 1978
+WARNING 2025-07-08 20:54:45,344 basehttp 7 133175683557056 "GET /static/vendor/limitless/css/colors.min.css HTTP/1.1" 404 1969
+WARNING 2025-07-08 20:54:45,365 basehttp 7 133175700342464 "GET /static/vendor/limitless/css/bootstrap_limitless.min.css HTTP/1.1" 404 2008
+WARNING 2025-07-08 20:54:45,367 basehttp 7 133175675164352 "GET /static/vendor/limitless/css/components.min.css HTTP/1.1" 404 1981
+WARNING 2025-07-08 20:54:45,376 basehttp 7 133175717127872 "GET /static/vendor/limitless/css/icomoon/styles.min.css HTTP/1.1" 404 1993
+WARNING 2025-07-08 20:54:45,398 basehttp 7 133175191795392 "GET /static/vendor/limitless/js/main/bootstrap.bundle.min.js HTTP/1.1" 404 2008
+WARNING 2025-07-08 20:54:45,399 basehttp 7 133175708735168 "GET /static/css/odinsight.css HTTP/1.1" 404 1915
+WARNING 2025-07-08 20:54:45,405 basehttp 7 133175683557056 "GET /static/vendor/jointjs/joint.css HTTP/1.1" 404 1936
+WARNING 2025-07-08 20:54:45,406 basehttp 7 133175691949760 "GET /static/images/placeholder.jpg HTTP/1.1" 404 1930
+WARNING 2025-07-08 20:54:45,417 basehttp 7 133175675164352 "GET /static/vendor/limitless/js/plugins/loaders/blockui.min.js HTTP/1.1" 404 2014
+WARNING 2025-07-08 20:54:45,421 basehttp 7 133175700342464 "GET /static/vendor/limitless/js/main/jquery.min.js HTTP/1.1" 404 1978
+WARNING 2025-07-08 20:54:45,424 basehttp 7 133175708735168 "GET /static/vendor/limitless/js/plugins/visualization/d3/d3.min.js HTTP/1.1" 404 2026
+WARNING 2025-07-08 20:54:45,442 basehttp 7 133175191795392 "GET /static/vendor/limitless/js/plugins/visualization/d3/d3_tooltip.js HTTP/1.1" 404 2038
+WARNING 2025-07-08 20:54:45,453 basehttp 7 133175717127872 "GET /static/vendor/limitless/js/plugins/forms/selects/bootstrap_multiselect.js HTTP/1.1" 404 2062
+WARNING 2025-07-08 20:54:45,454 basehttp 7 133175683557056 "GET /static/vendor/limitless/js/plugins/forms/styling/switchery.min.js HTTP/1.1" 404 2038
+WARNING 2025-07-08 20:54:45,459 basehttp 7 133175708735168 "GET /static/vendor/limitless/js/plugins/ui/moment/moment.min.js HTTP/1.1" 404 2017
+WARNING 2025-07-08 20:54:45,460 basehttp 7 133175675164352 "GET /static/vendor/limitless/js/plugins/pickers/daterangepicker.js HTTP/1.1" 404 2026
+WARNING 2025-07-08 20:54:45,461 basehttp 7 133175700342464 "GET /static/vendor/limitless/js/app.js HTTP/1.1" 404 1942
+WARNING 2025-07-08 20:54:45,470 basehttp 7 133175191795392 "GET /static/vendor/jointjs/joint.js HTTP/1.1" 404 1933
+WARNING 2025-07-08 20:54:45,471 basehttp 7 133175708735168 "GET /static/js/odinsight.js HTTP/1.1" 404 1909
+WARNING 2025-07-08 20:54:48,627 basehttp 7 133175708735168 "GET /static/vendor/limitless/css/icomoon/styles.min.css HTTP/1.1" 404 1993
+WARNING 2025-07-08 20:54:48,630 basehttp 7 133175675164352 "GET /static/vendor/limitless/css/layout.min.css HTTP/1.1" 404 1969
+WARNING 2025-07-08 20:54:48,631 basehttp 7 133175191795392 "GET /static/vendor/limitless/css/bootstrap.min.css HTTP/1.1" 404 1978
+WARNING 2025-07-08 20:54:48,635 basehttp 7 133175700342464 "GET /static/vendor/limitless/css/bootstrap_limitless.min.css HTTP/1.1" 404 2008
+WARNING 2025-07-08 20:54:48,638 basehttp 7 133175691949760 "GET /static/vendor/limitless/css/colors.min.css HTTP/1.1" 404 1969
+WARNING 2025-07-08 20:54:48,638 basehttp 7 133175717127872 "GET /static/vendor/limitless/css/components.min.css HTTP/1.1" 404 1981
+WARNING 2025-07-08 20:54:48,646 basehttp 7 133175191795392 "GET /static/css/odinsight.css HTTP/1.1" 404 1915
+WARNING 2025-07-08 20:54:48,646 basehttp 7 133175708735168 "GET /static/vendor/jointjs/joint.css HTTP/1.1" 404 1936
+INFO 2025-07-08 20:57:03,182 basehttp 7 133175708735168 "GET / HTTP/1.1" 200 21355
+WARNING 2025-07-08 20:57:03,243 basehttp 7 133175191795392 "GET /static/vendor/limitless/css/bootstrap.min.css HTTP/1.1" 404 1978
+WARNING 2025-07-08 20:57:03,243 basehttp 7 133175708735168 "GET /static/vendor/limitless/css/icomoon/styles.min.css HTTP/1.1" 404 1993
+WARNING 2025-07-08 20:57:03,249 basehttp 7 133175717127872 "GET /static/vendor/limitless/css/bootstrap_limitless.min.css HTTP/1.1" 404 2008
+WARNING 2025-07-08 20:57:03,260 basehttp 7 133175691949760 "GET /static/vendor/limitless/css/layout.min.css HTTP/1.1" 404 1969
+WARNING 2025-07-08 20:57:03,266 basehttp 7 133175700342464 "GET /static/vendor/limitless/css/components.min.css HTTP/1.1" 404 1981
+WARNING 2025-07-08 20:57:03,271 basehttp 7 133175683557056 "GET /static/vendor/limitless/css/colors.min.css HTTP/1.1" 404 1969
+WARNING 2025-07-08 20:57:03,283 basehttp 7 133175675164352 "GET /static/css/odinsight.css HTTP/1.1" 404 1915
+WARNING 2025-07-08 20:57:03,288 basehttp 7 133175717127872 "GET /static/vendor/limitless/js/main/jquery.min.js HTTP/1.1" 404 1978
+WARNING 2025-07-08 20:57:03,298 basehttp 7 133175691949760 "GET /static/vendor/limitless/js/main/bootstrap.bundle.min.js HTTP/1.1" 404 2008
+WARNING 2025-07-08 20:57:03,299 basehttp 7 133175191795392 "GET /static/vendor/jointjs/joint.css HTTP/1.1" 404 1936
+WARNING 2025-07-08 20:57:03,314 basehttp 7 133175700342464 "GET /static/images/placeholder.jpg HTTP/1.1" 404 1930
+WARNING 2025-07-08 20:57:03,319 basehttp 7 133175683557056 "GET /static/vendor/limitless/js/plugins/loaders/blockui.min.js HTTP/1.1" 404 2014
+WARNING 2025-07-08 20:57:03,326 basehttp 7 133175717127872 "GET /static/vendor/limitless/js/plugins/visualization/d3/d3_tooltip.js HTTP/1.1" 404 2038
+WARNING 2025-07-08 20:57:03,333 basehttp 7 133175675164352 "GET /static/vendor/limitless/js/plugins/visualization/d3/d3.min.js HTTP/1.1" 404 2026
+WARNING 2025-07-08 20:57:03,345 basehttp 7 133175191795392 "GET /static/vendor/limitless/js/plugins/forms/styling/switchery.min.js HTTP/1.1" 404 2038
+WARNING 2025-07-08 20:57:03,361 basehttp 7 133175700342464 "GET /static/vendor/limitless/js/plugins/ui/moment/moment.min.js HTTP/1.1" 404 2017
+WARNING 2025-07-08 20:57:03,365 basehttp 7 133175683557056 "GET /static/vendor/limitless/js/app.js HTTP/1.1" 404 1942
+WARNING 2025-07-08 20:57:03,375 basehttp 7 133175717127872 "GET /static/vendor/limitless/js/plugins/pickers/daterangepicker.js HTTP/1.1" 404 2026
+WARNING 2025-07-08 20:57:03,380 basehttp 7 133175691949760 "GET /static/vendor/limitless/js/plugins/forms/selects/bootstrap_multiselect.js HTTP/1.1" 404 2062
+WARNING 2025-07-08 20:57:03,382 basehttp 7 133175675164352 "GET /static/vendor/jointjs/joint.js HTTP/1.1" 404 1933
+WARNING 2025-07-08 20:57:03,386 basehttp 7 133175191795392 "GET /static/js/odinsight.js HTTP/1.1" 404 1909
+INFO 2025-07-09 08:14:06,548 autoreload 7 129247042374528 Watching for file changes with StatReloader
+INFO 2025-07-09 08:15:00,501 basehttp 7 129246959756992 "GET / HTTP/1.1" 200 21355
+WARNING 2025-07-09 08:15:00,692 basehttp 7 129246926186176 "GET /static/vendor/jointjs/joint.css HTTP/1.1" 404 1936
+WARNING 2025-07-09 08:15:00,692 basehttp 7 129246942971584 "GET /static/vendor/limitless/css/layout.min.css HTTP/1.1" 404 1969
+WARNING 2025-07-09 08:15:00,693 basehttp 7 129246951364288 "GET /static/vendor/limitless/css/bootstrap_limitless.min.css HTTP/1.1" 404 2008
+WARNING 2025-07-09 08:15:00,693 basehttp 7 129246917793472 "GET /static/vendor/limitless/css/bootstrap.min.css HTTP/1.1" 404 1978
+WARNING 2025-07-09 08:15:00,694 basehttp 7 129246959756992 "GET /static/vendor/limitless/css/icomoon/styles.min.css HTTP/1.1" 404 1993
+WARNING 2025-07-09 08:15:00,698 basehttp 7 129246934578880 "GET /static/vendor/limitless/css/components.min.css HTTP/1.1" 404 1981
+WARNING 2025-07-09 08:15:00,719 basehttp 7 129246926186176 "GET /static/css/odinsight.css HTTP/1.1" 404 1915
+WARNING 2025-07-09 08:15:00,727 basehttp 7 129246951364288 "GET /static/vendor/limitless/js/main/jquery.min.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 08:15:00,728 basehttp 7 129246959756992 "GET /static/images/placeholder.jpg HTTP/1.1" 404 1930
+WARNING 2025-07-09 08:15:00,734 basehttp 7 129246917793472 "GET /static/vendor/limitless/js/main/bootstrap.bundle.min.js HTTP/1.1" 404 2008
+WARNING 2025-07-09 08:15:00,734 basehttp 7 129246942971584 "GET /static/vendor/limitless/css/colors.min.css HTTP/1.1" 404 1969
+WARNING 2025-07-09 08:15:00,745 basehttp 7 129246934578880 "GET /static/vendor/limitless/js/plugins/loaders/blockui.min.js HTTP/1.1" 404 2014
+WARNING 2025-07-09 08:15:00,748 basehttp 7 129246926186176 "GET /static/vendor/limitless/js/plugins/visualization/d3/d3.min.js HTTP/1.1" 404 2026
+WARNING 2025-07-09 08:15:00,754 basehttp 7 129246959756992 "GET /static/vendor/limitless/js/plugins/visualization/d3/d3_tooltip.js HTTP/1.1" 404 2038
+WARNING 2025-07-09 08:15:00,757 basehttp 7 129246951364288 "GET /static/vendor/limitless/js/plugins/forms/styling/switchery.min.js HTTP/1.1" 404 2038
+WARNING 2025-07-09 08:15:00,762 basehttp 7 129246437570240 "GET /static/vendor/limitless/js/plugins/forms/selects/bootstrap_multiselect.js HTTP/1.1" 404 2062
+WARNING 2025-07-09 08:15:00,770 basehttp 7 129246942971584 "GET /static/vendor/limitless/js/plugins/ui/moment/moment.min.js HTTP/1.1" 404 2017
+WARNING 2025-07-09 08:15:00,777 basehttp 7 129246951364288 "GET /static/vendor/jointjs/joint.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 08:15:00,777 basehttp 7 129246926186176 "GET /static/vendor/limitless/js/app.js HTTP/1.1" 404 1942
+WARNING 2025-07-09 08:15:00,784 basehttp 7 129246959756992 "GET /static/vendor/limitless/js/plugins/pickers/daterangepicker.js HTTP/1.1" 404 2026
+WARNING 2025-07-09 08:15:00,785 basehttp 7 129246437570240 "GET /static/js/odinsight.js HTTP/1.1" 404 1909
+WARNING 2025-07-09 08:15:00,873 log 7 129246437570240 Not Found: /favicon.ico
+WARNING 2025-07-09 08:15:00,873 basehttp 7 129246437570240 "GET /favicon.ico HTTP/1.1" 404 3684
+WARNING 2025-07-09 08:15:28,235 basehttp 7 129246934578880 "GET /static/vendor/limitless/css/colors.min.css HTTP/1.1" 404 1969
+WARNING 2025-07-09 08:15:28,236 basehttp 7 129246959756992 "GET /static/vendor/limitless/css/bootstrap.min.css HTTP/1.1" 404 1978
+WARNING 2025-07-09 08:15:28,237 basehttp 7 129246951364288 "GET /static/vendor/limitless/css/layout.min.css HTTP/1.1" 404 1969
+WARNING 2025-07-09 08:15:28,237 basehttp 7 129246437570240 "GET /static/vendor/limitless/css/icomoon/styles.min.css HTTP/1.1" 404 1993
+WARNING 2025-07-09 08:15:28,239 basehttp 7 129246926186176 "GET /static/vendor/limitless/css/bootstrap_limitless.min.css HTTP/1.1" 404 2008
+WARNING 2025-07-09 08:15:28,241 basehttp 7 129246942971584 "GET /static/vendor/limitless/css/components.min.css HTTP/1.1" 404 1981
+WARNING 2025-07-09 08:15:28,251 basehttp 7 129246959756992 "GET /static/vendor/jointjs/joint.css HTTP/1.1" 404 1936
+WARNING 2025-07-09 08:15:28,253 basehttp 7 129246437570240 "GET /static/css/odinsight.css HTTP/1.1" 404 1915
+WARNING 2025-07-09 08:17:45,640 basehttp 7 129246437570240 "HEAD /static/assets/js/jquery/jquery.min.js HTTP/1.1" 404 0
+INFO 2025-07-09 08:19:44,980 autoreload 7 128734899768192 Watching for file changes with StatReloader
+WARNING 2025-07-09 08:19:48,031 basehttp 7 128734816364224 "HEAD /static/assets/js/jquery/jquery.min.js HTTP/1.1" 404 0
+INFO 2025-07-09 08:31:27,853 autoreload 8 125123303594880 Watching for file changes with StatReloader
+WARNING 2025-07-09 08:31:45,717 basehttp 8 125123220727488 "HEAD /static/assets/js/jquery/jquery.min.js HTTP/1.1" 404 0
+WARNING 2025-07-09 08:32:01,155 basehttp 8 125123220727488 "HEAD /static/assets/js/jquery/jquery.min.js HTTP/1.1" 404 0
+INFO 2025-07-09 08:36:23,721 autoreload 8 126925431212928 Watching for file changes with StatReloader
+WARNING 2025-07-09 08:36:35,610 basehttp 8 126925276182208 "HEAD /static/assets/js/jquery/jquery.min.js HTTP/1.1" 404 0
+INFO 2025-07-09 08:40:17,598 autoreload 8 126925431212928 /app/config/settings/base.py changed, reloading.
+INFO 2025-07-09 08:40:17,894 autoreload 50 124010390002560 Watching for file changes with StatReloader
+INFO 2025-07-09 08:40:27,320 autoreload 50 124010390002560 /app/config/settings/base.py changed, reloading.
+INFO 2025-07-09 08:40:27,636 autoreload 52 126496377711488 Watching for file changes with StatReloader
+INFO 2025-07-09 08:40:37,154 autoreload 7 134054878108544 Watching for file changes with StatReloader
