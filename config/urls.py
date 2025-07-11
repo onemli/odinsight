@@ -9,10 +9,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include('apps.api.v1.urls')),
-    path('api/v2/', include('apps.api.v2.urls')),
+    # path('api/v1/', include('apps.api.v1.urls')),
+    # path('api/v2/', include('apps.api.v2.urls')),
     path('devices/', include('apps.devices.urls')),
     path('workflows/', include('apps.workflows.urls')),
+    
     path('network/', include('apps.network.urls')),
     path('backups/', include('apps.backups.urls')),
     path('integrations/', include('apps.integrations.urls')),

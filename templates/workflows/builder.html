@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="workflow-builder-root"></div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/network-workflow/workflow-builder.bundle.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odinsight Workflow Editor</title>
+    {% load static %}
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- React Flow CSS - CDN fallback for Docker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@reactflow/core@11.11.0/dist/style.css" 
+          onerror="this.onerror=null;this.href='{% static 'css/reactflow-fallback.css' %}'">
+    
+    <!-- Bootstrap CSS (mevcut sisteminizle uyumlu olması için) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        }
+        .workflow-container {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+        /* React Flow özelleştirmeleri */
+        .react-flow__node {
+            cursor: pointer;
+        }
+        .react-flow__edge {
+            cursor: pointer;
+        }
+        .react-flow__controls {
+            bottom: 20px;
+            left: 20px;
+        }
+        .react-flow__minimap {
+            bottom: 20px;
+            right: 20px;
+        }
+        /* Özel node stilleri */
+        .custom-node {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            background: white;
+            padding: 10px;
+            min-width: 120px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .custom-node.selected {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+        }
+        /* Sidebar özelleştirmeleri */
+        .sidebar {
+            background: #f8f9fa;
+            border-right: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        .sidebar.collapsed {
+            width: 50px;
+        }
+        .sidebar.expanded {
+            width: 280px;
+        }
+        /* Responsive tasarım */
+        @media (max-width: 768px) {
+            .sidebar.expanded {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% csrf_token %}
+    
+    <!-- Ana Container -->
+    <div id="workflow-app" class="workflow-container">
+        <!-- Yükleniyor mesajı -->
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <span class="ms-3">Workflow Editor Loading...</span>
+        </div>
+    </div>
+
+    <!-- JavaScript Kütüphaneleri -->
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- React Flow - Doğru CDN linkler -->
+    <script src="https://cdn.jsdelivr.net/npm/reactflow@11.10.4/dist/umd/index.js"></script>
+    
+    <!-- React Flow kütüphanesini test et ve global olarak ayarla -->
+    <script>
+        // React Flow'un yüklenip yüklenmediğini kontrol et
+        window.checkLibraries = function() {
+            console.log('React:', typeof React);
+            console.log('ReactDOM:', typeof ReactDOM);
+            console.log('ReactFlow window object:', typeof window.ReactFlow);
+            
+            if (typeof window.ReactFlow !== 'undefined') {
+                // ReactFlow yüklendiyse global değişkenleri ayarla
+                window.ReactFlowLib = window.ReactFlow;
+                console.log('ReactFlow loaded successfully');
+                return true;
+            } else {
+                console.error('ReactFlow not loaded');
+                return false;
+            }
+        };
+        
+        // Sayfa yüklendiğinde kontrol et
+        window.addEventListener('load', function() {
+            setTimeout(window.checkLibraries, 100);
+        });
+    </script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- React Flow kütüphanesini global olarak erişilebilir hale getir -->
+    <script>
+        // ReactFlow kütüphanesinin yüklenmesini bekle
+        function waitForReactFlow() {
+            return new Promise((resolve, reject) => {
+                let attempts = 0;
+                const maxAttempts = 50;
+                
+                function check() {
+                    attempts++;
+                    if (typeof window.ReactFlow !== 'undefined') {
+                        // ReactFlow yüklendi, global değişkenleri ayarla
+                        window.ReactFlowLib = window.ReactFlow;
+                        console.log('ReactFlow library loaded successfully');
+                        resolve();
+                    } else if (attempts >= maxAttempts) {
+                        reject(new Error('ReactFlow failed to load after ' + maxAttempts + ' attempts'));
+                    } else {
+                        setTimeout(check, 100);
+                    }
+                }
+                check();
+            });
+        }
+    </script>
+    
+    <!-- Workflow Editor JavaScript -->
+    <script src="{% static 'js/workflow/workflow-editor.js' %}"></script>
+    
+    <!-- Uygulama Başlatma -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // React uygulamasını render et
+            const container = document.getElementById('workflow-app');
+            const root = ReactDOM.createRoot(container);
+            root.render(React.createElement(window.WorkflowApp));
+            
+            console.log('Odinsight Workflow Editor loaded successfully!');
+        });
+        
+        // Global yardımcı fonksiyonlar
+        window.WorkflowUtils = {
+            // Workflow'u backend'e kaydet
+            saveWorkflow: async function(workflowData) {
+                try {
+                    const response = await fetch('/api/workflows/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                        },
+                        body: JSON.stringify(workflowData)
+                    });
+                    
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error executing workflow:', error);
+                    throw error;
+                }
+            }
+        };
+    </script>
+</body>
+</html> (error) {
+                    console.error('Error saving workflow:', error);
+                    throw error;
+                }
+            },
+            
+            // Workflow'u yükle
+            loadWorkflow: async function(workflowId) {
+                try {
+                    const response = await fetch(`/api/workflows/${workflowId}/`);
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error loading workflow:', error);
+                    throw error;
+                }
+            },
+            
+            // Workflow'u çalıştır
+            executeWorkflow: async function(workflowId) {
+                try {
+                    const response = await fetch(`/api/workflows/${workflowId}/execute/`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                        }
+                    });
+                    
+                    return await response.json();
+                } catch

@@ -13,7 +13,6 @@ def index(request):
     }
     return render(request, 'core/dashboard.html', context)
 
-@login_required
 def workflow_builder(request):
     """Network Automation Workflow Builder"""
     context = {

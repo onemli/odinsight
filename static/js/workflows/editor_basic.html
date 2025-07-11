@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odinsight Workflow Editor</title>
+    {% load static %}
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        }
+        
+        .workflow-container {
+            height: 100vh;
+            display: flex;
+        }
+        
+        .sidebar {
+            width: 280px;
+            background: #f8f9fa;
+            border-right: 1px solid #dee2e6;
+            overflow-y: auto;
+        }
+        
+        .canvas-area {
+            flex: 1;
+            position: relative;
+            background: #ffffff;
+            background-image: 
+                radial-gradient(circle, #e9ecef 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .workflow-node {
+            position: absolute;
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 12px;
+            min-width: 150px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: move;
+            user-select: none;
+        }
+        
+        .workflow-node:hover {
+            border-color: #007bff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .workflow-node.selected {
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+        }
+        
+        .node-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .node-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        
+        .node-ansible { background-color: #dc3545; }
+        .node-cli { background-color: #28a745; }
+        .node-netconf { background-color: #17a2b8; }
+        .node-condition { background-color: #ffc107; color: #000; }
+        .node-output { background-color: #6f42c1; }
+        
+        .node-config {
+            margin-top: 8px;
+            font-size: 11px;
+            color: #6c757d;
+            background: #f8f9fa;
+            padding: 4px;
+            border-radius: 4px;
+        }
+        
+        .connection-line {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .toolbar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 100;
+        }
+        
+        .node-editor {
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            width: 300px;
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 200;
+        }
+        
+        .dragging {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    {% csrf_token %}
+    
+    <div class="workflow-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="p-3 border-bottom">
+                <h5 class="mb-0">
+                    <i class="fas fa-project-diagram me-2"></i>
+                    Workflow Blocks
+                </h5>
+            </div>
+            
+            <!-- Automation Category -->
+            <div class="p-3">
+                <h6 class="text-muted mb-2">
+                    <i class="fas fa-robot me-1"></i>
+                    Automation
+                </h6>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-primary btn-sm text-start" 
+                            onclick="addNode('ansible-playbook', 'Ansible Playbook')">
+                        <i class="fas fa-play me-2"></i>Ansible Playbook
+                    </button>
+                    <button class="btn btn-outline-success btn-sm text-start" 
+                            onclick="addNode('cli-parser', 'CLI Parser')">
+                        <i class="fas fa-terminal me-2"></i>CLI Parser
+                    </button>
+                    <button class="btn btn-outline-info btn-sm text-start" 
+                            onclick="addNode('netconf', 'NETCONF')">
+                        <i class="fas fa-network-wired me-2"></i>NETCONF
+                    </button>
+                    <button class="btn btn-outline-warning btn-sm text-start" 
+                            onclick="addNode('restconf', 'RESTCONF')">
+                        <i class="fas fa-globe me-2"></i>RESTCONF
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Logic Category -->
+            <div class="p-3 border-top">
+                <h6 class="text-muted mb-2">
+                    <i class="fas fa-code-branch me-1"></i>
+                    Logic
+                </h6>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-warning btn-sm text-start" 
+                            onclick="addNode('condition', 'Condition')">
+                        <i class="fas fa-question me-2"></i>Condition
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm text-start" 
+                            onclick="addNode('loop', 'Loop')">
+                        <i class="fas fa-redo me-2"></i>Loop
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Data Category -->
+            <div class="p-3 border-top">
+                <h6 class="text-muted mb-2">
+                    <i class="fas fa-database me-1"></i>
+                    Data
+                </h6>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-primary btn-sm text-start" 
+                            onclick="addNode('input', 'Input')">
+                        <i class="fas fa-sign-in-alt me-2"></i>Input
+                    </button>
+                    <button class="btn btn-outline-purple btn-sm text-start" 
+                            onclick="addNode('output', 'Output')">
+                        <i class="fas fa-sign-out-alt me-2"></i>Output
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Canvas Area -->
+        <div class="canvas-area" id="canvas">
+            <!-- Toolbar -->
+            <div class="toolbar">
+                <div class="btn-group" role="group">
+                    <input type="text" id="workflowName" class="form-control" 
+                           value="Untitled Workflow" style="width: 200px;">
+                    <button class="btn btn-primary" onclick="saveWorkflow()">
+                        <i class="fas fa-save me-1"></i>Save
+                    </button>
+                    <button class="btn btn-success" onclick="executeWorkflow()">
+                        <i class="fas fa-play me-1"></i>Run
+                    </button>
+                    <button class="btn btn-danger" onclick="clearCanvas()">
+                        <i class="fas fa-trash me-1"></i>Clear
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Node Editor (Hidden by default) -->
+            <div id="nodeEditor" class="node-editor" style="display: none;">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="mb-0">Edit Node</h6>
+                    <button class="btn-close" onclick="closeNodeEditor()"></button>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Node Name</label>
+                    <input type="text" id="editNodeName" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Configuration (YAML)</label>
+                    <textarea id="editNodeConfig" class="form-control" rows="6" 
+                              placeholder="Enter YAML configuration..."></textarea>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-primary" onclick="saveNodeEdit()">Save</button>
+                    <button class="btn btn-secondary" onclick="closeNodeEditor()">Cancel</button>
+                    <button class="btn btn-danger" onclick="deleteNode()">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Global variables
+        let nodes = [];
+        let connections = [];
+        let selectedNode = null;
+        let nodeCounter = 0;
+        let draggedNode = null;
+        let isDragging = false;
+        
+        // Node type configurations
+        const nodeConfigs = {
+            'ansible-playbook': { 
+                icon: 'fas fa-play', 
+                class: 'node-ansible',
+                defaultConfig: '---\n- name: Example playbook\n  hosts: all\n  tasks:\n    - name: Ping\n      ping:'
+            },
+            'cli-parser': { 
+                icon: 'fas fa-terminal', 
+                class: 'node-cli',
+                defaultConfig: 'command: show version\nparser: textfsm'
+            },
+            'netconf': { 
+                icon: 'fas fa-network-wired', 
+                class: 'node-netconf',
+                defaultConfig: 'operation: get-config\nsource: running'
+            },
+            'restconf': { 
+                icon: 'fas fa-globe', 
+                class: 'node-netconf',
+                defaultConfig: 'method: GET\npath: /restconf/data/interfaces'
+            },
+            'condition': { 
+                icon: 'fas fa-question', 
+                class: 'node-condition',
+                defaultConfig: 'condition: "{{ result.success == true }}"\non_true: continue\non_false: stop'
+            },
+            'loop': { 
+                icon: 'fas fa-redo', 
+                class: 'node-cli',
+                defaultConfig: 'items: ["item1", "item2"]\nmax_iterations: 10'
+            },
+            'input': { 
+                icon: 'fas fa-sign-in-alt', 
+                class: 'node-ansible',
+                defaultConfig: 'type: string\nrequired: true\ndefault: ""'
+            },
+            'output': { 
+                icon: 'fas fa-sign-out-alt', 
+                class: 'node-output',
+                defaultConfig: 'format: json\ndestination: file'
+            }
+        };
+        
+        // Add node to canvas
+        function addNode(type, label) {
+            const canvas = document.getElementById('canvas');
+            const nodeId = 'node_' + (nodeCounter++);
+            
+            const node = {
+                id: nodeId,
+                type: type,
+                label: label,
+                x: Math.random() * 400 + 100,
+                y: Math.random() * 300 + 100,
+                config: nodeConfigs[type]?.defaultConfig || ''
+            };
+            
+            nodes.push(node);
+            renderNode(node);
+        }
+        
+        // Render node on canvas
+        function renderNode(node) {
+            const canvas = document.getElementById('canvas');
+            const config = nodeConfigs[node.type];
+            
+            const nodeDiv = document.createElement('div');
+            nodeDiv.id = node.id;
+            nodeDiv.className = 'workflow-node';
+            nodeDiv.style.left = node.x + 'px';
+            nodeDiv.style.top = node.y + 'px';
+            
+            nodeDiv.innerHTML = `
+                <div class="node-header">
+                    <div class="d-flex align-items-center">
+                        <div class="node-icon ${config.class}">
+                            <i class="${config.icon}"></i>
+                        </div>
+                        <strong>${node.label}</strong>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-secondary" type="button" 
+                                onclick="editNode('${node.id}')">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="small text-muted">${node.type}</div>
+                ${node.config ? `<div class="node-config">${node.config.substring(0, 50)}...</div>` : ''}
+            `;
+            
+            // Add drag functionality
+            nodeDiv.addEventListener('mousedown', startDrag);
+            nodeDiv.addEventListener('click', selectNode);
+            
+            canvas.appendChild(nodeDiv);
+        }
+        
+        // Drag functionality
+        function startDrag(e) {
+            if (e.target.closest('.btn') || e.target.closest('.dropdown')) return;
+            
+            draggedNode = e.currentTarget;
+            isDragging = true;
+            draggedNode.classList.add('dragging');
+            
+            const rect = draggedNode.getBoundingClientRect();
+            const canvas = document.getElementById('canvas');
+            const canvasRect = canvas.getBoundingClientRect();
+            
+            const offsetX = e.clientX - rect.left;
+            const offsetY = e.clientY - rect.top;
+            
+            function onMouseMove(e) {
+                if (!isDragging) return;
+                
+                const x = e.clientX - canvasRect.left - offsetX;
+                const y = e.clientY - canvasRect.top - offsetY;
+                
+                draggedNode.style.left = Math.max(0, x) + 'px';
+                draggedNode.style.top = Math.max(0, y) + 'px';
+                
+                // Update node position in data
+                const nodeId = draggedNode.id;
+                const node = nodes.find(n => n.id === nodeId);
+                if (node) {
+                    node.x = x;
+                    node.y = y;
+                }
+            }
+            
+            function onMouseUp() {
+                isDragging = false;
+                if (draggedNode) {
+                    draggedNode.classList.remove('dragging');
+                    draggedNode = null;
+                }
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            }
+            
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+            
+            e.preventDefault();
+        }
+        
+        // Select node
+        function selectNode(e) {
+            if (isDragging) return;
+            
+            // Remove previous selection
+            document.querySelectorAll('.workflow-node').forEach(node => {
+                node.classList.remove('selected');
+            });
+            
+            // Add selection to current node
+            e.currentTarget.classList.add('selected');
+            selectedNode = e.currentTarget.id;
+        }
+        
+        // Edit node
+        function editNode(nodeId) {
+            const node = nodes.find(n => n.id === nodeId);
+            if (!node) return;
+            
+            document.getElementById('editNodeName').value = node.label;
+            document.getElementById('editNodeConfig').value = node.config;
+            document.getElementById('nodeEditor').style.display = 'block';
+            selectedNode = nodeId;
+        }
+        
+        // Save node edit
+        function saveNodeEdit() {
+            if (!selectedNode) return;
+            
+            const node = nodes.find(n => n.id === selectedNode);
+            if (!node) return;
+            
+            node.label = document.getElementById('editNodeName').value;
+            node.config = document.getElementById('editNodeConfig').value;
+            
+            // Re-render node
+            const nodeElement = document.getElementById(selectedNode);
+            if (nodeElement) {
+                nodeElement.remove();
+                renderNode(node);
+            }
+            
+            closeNodeEditor();
+        }
+        
+        // Close node editor
+        function closeNodeEditor() {
+            document.getElementById('nodeEditor').style.display = 'none';
+            selectedNode = null;
+        }
+        
+        // Delete node
+        function deleteNode() {
+            if (!selectedNode) return;
+            
+            // Remove from nodes array
+            nodes = nodes.filter(n => n.id !== selectedNode);
+            
+            // Remove from DOM
+            const nodeElement = document.getElementById(selectedNode);
+            if (nodeElement) {
+                nodeElement.remove();
+            }
+            
+            closeNodeEditor();
+        }
+        
+        // Save workflow
+        async function saveWorkflow() {
+            const workflowData = {
+                name: document.getElementById('workflowName').value,
+                nodes: nodes,
+                connections: connections,
+                timestamp: new Date().toISOString()
+            };
+            
+            try {
+                const response = await fetch('/workflow/api/workflows/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                    },
+                    body: JSON.stringify(workflowData)
+                });
+                
+                if (response.ok) {
+                    alert('Workflow saved successfully!');
+                } else {
+                    alert('Error saving workflow');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error saving workflow');
+            }
+        }
+        
+        // Execute workflow
+        async function executeWorkflow() {
+            if (nodes.length === 0) {
+                alert('Please add some nodes to the workflow first.');
+                return;
+            }
+            
+            try {
+                alert('Workflow execution started! (This is a demo)');
+                // Burada gerçek execution logic gelecek
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error executing workflow');
+            }
+        }
+        
+        // Clear canvas
+        function clearCanvas() {
+            if (confirm('Are you sure you want to clear the workflow?')) {
+                nodes = [];
+                connections = [];
+                selectedNode = null;
+                
+                const canvas = document.getElementById('canvas');
+                const workflowNodes = canvas.querySelectorAll('.workflow-node');
+                workflowNodes.forEach(node => node.remove());
+                
+                closeNodeEditor();
+            }
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Simple Workflow Editor loaded successfully!');
+            
+            // Add some sample nodes for testing
+            setTimeout(() => {
+                addNode('ansible-playbook', 'Network Backup');
+                addNode('condition', 'Check Success');
+                addNode('output', 'Save Results');
+            }, 500);
+        });
+    </script>
+</body>
+</html>

@@ -1277,3 +1277,1800 @@ Traceback (most recent call last):
 django.template.exceptions.TemplateDoesNotExist: core/dashboard.html
 ERROR 2025-07-09 12:29:03,366 basehttp 9 133185860003520 "GET / HTTP/1.1" 500 79467
 INFO 2025-07-09 12:29:18,631 basehttp 9 133185860003520 "GET / HTTP/1.1" 200 21958
+INFO 2025-07-09 13:19:47,430 basehttp 9 133185860003520 "GET / HTTP/1.1" 200 21958
+INFO 2025-07-09 13:20:34,120 basehttp 9 133185860003520 "GET / HTTP/1.1" 200 21958
+INFO 2025-07-09 13:20:35,162 basehttp 9 133185860003520 "GET / HTTP/1.1" 200 21958
+INFO 2025-07-09 13:20:54,888 basehttp 9 133185860003520 "GET / HTTP/1.1" 200 21958
+INFO 2025-07-09 13:21:40,900 basehttp 9 133185860003520 "GET / HTTP/1.1" 200 21958
+INFO 2025-07-09 13:22:11,884 autoreload 7 139110268619648 Watching for file changes with StatReloader
+INFO 2025-07-09 13:22:16,778 basehttp 7 139110185428672 "GET / HTTP/1.1" 200 21958
+INFO 2025-07-09 13:23:59,605 basehttp 7 139110185428672 "GET / HTTP/1.1" 200 100635
+INFO 2025-07-09 13:23:59,652 basehttp 7 139110185428672 "GET /static/fonts/inter/inter.css HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,652 basehttp 7 139110175987392 "GET /static/icons/phosphor/styles.min.css HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,655 basehttp 7 139109955790528 "GET /static/css/all.min.css HTTP/1.1" 304 0
+WARNING 2025-07-09 13:23:59,680 basehttp 7 139109947397824 "GET /static/js/vendor/jointjs/joint-plus.js HTTP/1.1" 404 1957
+WARNING 2025-07-09 13:23:59,681 basehttp 7 139109939005120 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 13:23:59,681 basehttp 7 139109964183232 "GET /static/css/joint-plus.css HTTP/1.1" 404 1918
+INFO 2025-07-09 13:23:59,690 basehttp 7 139109964183232 "GET /static/js/bootstrap/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,692 basehttp 7 139109939005120 "GET /static/js/vendor/visualization/d3/d3.min.js HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,693 basehttp 7 139109947397824 "GET /static/js/vendor/visualization/d3/d3_tooltip.js HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,702 basehttp 7 139109955790528 "GET /static/js/app.js HTTP/1.1" 304 0
+WARNING 2025-07-09 13:23:59,709 basehttp 7 139110185428672 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 13:23:59,710 basehttp 7 139110175987392 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 13:23:59,723 basehttp 7 139110185428672 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 13:23:59,724 basehttp 7 139110175987392 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 13:23:59,737 basehttp 7 139110185428672 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 13:23:59,737 basehttp 7 139110175987392 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+INFO 2025-07-09 13:23:59,765 basehttp 7 139109955790528 "GET /static/images/logo_icon.svg HTTP/1.1" 304 0
+WARNING 2025-07-09 13:23:59,765 basehttp 7 139109939005120 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 13:23:59,767 basehttp 7 139110175987392 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 13:23:59,772 basehttp 7 139109947397824 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 13:23:59,777 basehttp 7 139110185428672 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 13:23:59,779 basehttp 7 139109964183232 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 13:23:59,790 basehttp 7 139110175987392 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 13:23:59,792 basehttp 7 139110185428672 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-09 13:23:59,836 basehttp 7 139109955790528 "GET /static/images/demo/logos/1.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,837 basehttp 7 139110185428672 "GET /static/images/demo/logos/2.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,845 basehttp 7 139110175987392 "GET /static/images/demo/logos/3.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,847 basehttp 7 139109964183232 "GET /static/images/demo/logos/4.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,849 basehttp 7 139109939005120 "GET /static/images/demo/users/face3.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,850 basehttp 7 139109947397824 "GET /static/images/demo/users/face10.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,888 basehttp 7 139109955790528 "GET /static/images/demo/users/face4.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,888 basehttp 7 139110185428672 "GET /static/images/demo/users/face24.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,911 basehttp 7 139109939005120 "GET /static/images/icons/pdf.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,913 basehttp 7 139110175987392 "GET /static/images/demo/users/face13.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,913 basehttp 7 139109947397824 "GET /static/images/demo/users/face11.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,914 basehttp 7 139109964183232 "GET /static/images/demo/users/face1.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,948 basehttp 7 139109955790528 "GET /static/icons/phosphor/fonts/Phosphor.ttf?9jjo3j HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,949 basehttp 7 139110185428672 "GET /static/fonts/inter/Inter-SemiBold.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,967 basehttp 7 139110175987392 "GET /static/fonts/inter/Inter-Regular.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,968 basehttp 7 139109964183232 "GET /static/fonts/inter/Inter-Medium.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,968 basehttp 7 139109939005120 "GET /static/fonts/inter/Inter-Bold.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,970 basehttp 7 139109947397824 "GET /static/images/brands/tesla.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,994 basehttp 7 139110185428672 "GET /static/images/demo/users/face12.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 13:23:59,994 basehttp 7 139109955790528 "GET /static/images/demo/users/face25.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 13:24:00,031 basehttp 7 139109964183232 "GET /static/images/brands/adobe.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:24:00,031 basehttp 7 139109939005120 "GET /static/images/brands/debijenkorf.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:24:00,032 basehttp 7 139110175987392 "GET /static/images/brands/holiday-inn.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:24:00,032 basehttp 7 139109947397824 "GET /static/images/brands/ing.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:24:00,045 basehttp 7 139109955790528 "GET /static/images/brands/shell.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:24:00,045 basehttp 7 139110185428672 "GET /static/images/brands/klm.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:24:00,092 basehttp 7 139109947397824 "GET /static/images/brands/bp.svg HTTP/1.1" 304 0
+INFO 2025-07-09 13:24:44,093 autoreload 7 131161681619840 Watching for file changes with StatReloader
+INFO 2025-07-09 13:24:46,362 basehttp 7 131161523222208 "GET / HTTP/1.1" 200 100635
+WARNING 2025-07-09 13:24:46,435 basehttp 7 131161481258688 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 13:24:46,436 basehttp 7 131161514829504 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 13:24:46,439 basehttp 7 131161489651392 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 13:24:46,445 basehttp 7 131161506436800 "GET /static/js/vendor/jointjs/joint-plus.js HTTP/1.1" 404 1957
+WARNING 2025-07-09 13:24:46,457 basehttp 7 131161498044096 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 13:24:46,482 basehttp 7 131161472865984 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 13:24:46,483 basehttp 7 131160986351296 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 13:24:46,492 basehttp 7 131160977958592 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 13:24:46,492 basehttp 7 131161489651392 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 13:24:46,499 basehttp 7 131161514829504 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 13:24:46,516 basehttp 7 131160986351296 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 13:24:46,521 basehttp 7 131161472865984 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 13:24:46,526 basehttp 7 131161489651392 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 13:24:46,527 basehttp 7 131160977958592 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-09 13:24:46,533 basehttp 7 131161523222208 "GET /static/css/joint-plus.css HTTP/1.1" 200 415639
+WARNING 2025-07-09 13:24:46,670 basehttp 7 131161523222208 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 13:24:58,776 basehttp 7 131161523222208 "GET /static/js/vendor/jointjs/joint-plus.js HTTP/1.1" 404 1957
+WARNING 2025-07-09 13:26:23,789 basehttp 7 131161523222208 "GET /static/js/vendor/jointjs/joint-plus.js HTTP/1.1" 404 1957
+INFO 2025-07-09 13:26:28,488 autoreload 7 136923083725696 Watching for file changes with StatReloader
+WARNING 2025-07-09 13:26:30,842 basehttp 7 136923000596160 "GET /static/js/vendor/jointjs/joint-plus.js HTTP/1.1" 404 1957
+INFO 2025-07-09 13:26:34,384 basehttp 7 136923000596160 "GET / HTTP/1.1" 200 100632
+INFO 2025-07-09 13:26:34,434 basehttp 7 136922991154880 "GET /static/css/joint-plus.css HTTP/1.1" 304 0
+WARNING 2025-07-09 13:26:34,449 basehttp 7 136922982762176 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 13:26:34,454 basehttp 7 136923000596160 "GET /static/vendor/jointjs/joint-plus.js HTTP/1.1" 404 1948
+WARNING 2025-07-09 13:26:34,454 basehttp 7 136922974369472 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 13:26:34,474 basehttp 7 136922965976768 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 13:26:34,507 basehttp 7 136922609477312 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 13:26:34,509 basehttp 7 136922974369472 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 13:26:34,512 basehttp 7 136922617870016 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 13:26:34,546 basehttp 7 136922974369472 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 13:26:34,555 basehttp 7 136922617870016 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 13:26:34,556 basehttp 7 136922609477312 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 13:26:34,560 basehttp 7 136922991154880 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 13:26:34,572 basehttp 7 136922965976768 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 13:26:34,583 basehttp 7 136923000596160 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 13:26:34,585 basehttp 7 136922974369472 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 13:26:34,585 basehttp 7 136922609477312 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 13:26:55,203 autoreload 7 130033544223616 Watching for file changes with StatReloader
+INFO 2025-07-09 13:26:56,387 basehttp 7 130033460963008 "GET / HTTP/1.1" 200 100632
+WARNING 2025-07-09 13:26:56,419 basehttp 7 130033460963008 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 13:26:56,445 basehttp 7 130033087674048 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 13:26:56,450 basehttp 7 130033460963008 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 13:26:56,457 basehttp 7 130033435784896 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 13:26:56,463 basehttp 7 130033444177600 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 13:26:56,471 basehttp 7 130033079281344 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 13:26:56,473 basehttp 7 130033087674048 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 13:26:56,481 basehttp 7 130033460963008 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 13:26:56,491 basehttp 7 130033435784896 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 13:26:56,502 basehttp 7 130033079281344 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 13:26:56,508 basehttp 7 130033444177600 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 13:26:56,513 basehttp 7 130033087674048 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 13:26:56,514 basehttp 7 130033435784896 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 13:26:56,530 basehttp 7 130033435784896 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 13:26:56,571 basehttp 7 130033452570304 "GET /static/vendor/jointjs/joint-plus.js HTTP/1.1" 200 910999
+INFO 2025-07-09 13:27:32,134 basehttp 7 130033452570304 "GET / HTTP/1.1" 200 100632
+INFO 2025-07-09 13:27:32,167 basehttp 7 130033452570304 "GET /static/css/joint-plus.css HTTP/1.1" 304 0
+WARNING 2025-07-09 13:27:32,187 basehttp 7 130033444177600 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 13:27:32,194 basehttp 7 130033087674048 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 13:27:32,199 basehttp 7 130033435784896 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 13:27:32,205 basehttp 7 130033079281344 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 13:27:32,210 basehttp 7 130033460963008 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 13:27:32,217 basehttp 7 130033444177600 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 13:27:32,227 basehttp 7 130033087674048 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 13:27:32,228 basehttp 7 130033079281344 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 13:27:32,238 basehttp 7 130033460963008 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 13:27:32,245 basehttp 7 130033435784896 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 13:27:32,246 basehttp 7 130033452570304 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 13:27:32,252 basehttp 7 130033087674048 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 13:27:32,253 basehttp 7 130033444177600 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 13:27:32,313 basehttp 7 130033444177600 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:09:45,903 basehttp 7 130033444177600 "GET / HTTP/1.1" 200 100632
+INFO 2025-07-09 14:09:45,938 basehttp 7 130033087674048 "GET /static/icons/phosphor/styles.min.css HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:45,939 basehttp 7 130033435784896 "GET /static/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:45,939 basehttp 7 130033444177600 "GET /static/fonts/inter/inter.css HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:45,944 basehttp 7 130033452570304 "GET /static/css/joint-plus.css HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:45,946 basehttp 7 130033079281344 "GET /static/js/bootstrap/bootstrap.bundle.min.js HTTP/1.1" 304 0
+WARNING 2025-07-09 14:09:45,953 basehttp 7 130033460963008 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+INFO 2025-07-09 14:09:45,957 basehttp 7 130033460963008 "GET /static/vendor/jointjs/joint-plus.js HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:45,995 basehttp 7 130033087674048 "GET /static/js/vendor/visualization/d3/d3.min.js HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:45,995 basehttp 7 130033435784896 "GET /static/js/app.js HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:45,997 basehttp 7 130033444177600 "GET /static/js/vendor/visualization/d3/d3_tooltip.js HTTP/1.1" 304 0
+WARNING 2025-07-09 14:09:46,031 basehttp 7 130033452570304 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:09:46,035 basehttp 7 130033079281344 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:09:46,036 basehttp 7 130033460963008 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:09:46,049 basehttp 7 130033079281344 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:09:46,064 basehttp 7 130033460963008 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:09:46,073 basehttp 7 130033452570304 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:09:46,073 basehttp 7 130033444177600 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+INFO 2025-07-09 14:09:46,086 basehttp 7 130033070888640 "GET /static/images/logo_icon.svg HTTP/1.1" 304 0
+WARNING 2025-07-09 14:09:46,086 basehttp 7 130033087674048 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:09:46,089 basehttp 7 130033460963008 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:09:46,089 basehttp 7 130033435784896 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:09:46,096 basehttp 7 130033079281344 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:09:46,096 basehttp 7 130033452570304 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:09:46,100 basehttp 7 130033087674048 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-09 14:09:46,112 basehttp 7 130033087674048 "GET /static/images/demo/logos/1.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,112 basehttp 7 130033452570304 "GET /static/images/demo/logos/2.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,114 basehttp 7 130033079281344 "GET /static/images/demo/logos/3.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,115 basehttp 7 130033460963008 "GET /static/images/demo/logos/4.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,116 basehttp 7 130033444177600 "GET /static/images/demo/users/face10.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,146 basehttp 7 130033070888640 "GET /static/images/demo/users/face25.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,161 basehttp 7 130033079281344 "GET /static/images/demo/users/face24.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,161 basehttp 7 130033087674048 "GET /static/images/demo/users/face1.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,161 basehttp 7 130033452570304 "GET /static/images/demo/users/face3.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,177 basehttp 7 130033460963008 "GET /static/images/demo/users/face11.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,177 basehttp 7 130033444177600 "GET /static/images/demo/users/face4.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,194 basehttp 7 130033070888640 "GET /static/icons/phosphor/fonts/Phosphor.ttf?9jjo3j HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,206 basehttp 7 130033452570304 "GET /static/fonts/inter/Inter-Regular.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,207 basehttp 7 130033087674048 "GET /static/fonts/inter/Inter-SemiBold.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,208 basehttp 7 130033079281344 "GET /static/fonts/inter/Inter-Medium.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,224 basehttp 7 130033460963008 "GET /static/fonts/inter/Inter-Bold.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,225 basehttp 7 130033444177600 "GET /static/images/icons/pdf.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,254 basehttp 7 130033087674048 "GET /static/images/brands/tesla.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,254 basehttp 7 130033070888640 "GET /static/images/demo/users/face12.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,255 basehttp 7 130033452570304 "GET /static/images/demo/users/face13.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,257 basehttp 7 130033079281344 "GET /static/images/brands/adobe.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,271 basehttp 7 130033460963008 "GET /static/images/brands/holiday-inn.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,311 basehttp 7 130033444177600 "GET /static/images/brands/ing.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,312 basehttp 7 130033087674048 "GET /static/images/brands/debijenkorf.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,313 basehttp 7 130033452570304 "GET /static/images/brands/klm.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,313 basehttp 7 130033070888640 "GET /static/images/brands/shell.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:09:46,321 basehttp 7 130033079281344 "GET /static/images/brands/bp.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:10:36,453 basehttp 7 130033079281344 "GET / HTTP/1.1" 200 100632
+WARNING 2025-07-09 14:10:36,504 basehttp 7 130033070888640 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:10:36,515 basehttp 7 130033087674048 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:10:36,518 basehttp 7 130033452570304 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:10:36,520 basehttp 7 130033444177600 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:10:36,526 basehttp 7 130033070888640 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:10:36,526 basehttp 7 130033460963008 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:10:36,528 basehttp 7 130033079281344 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:10:36,556 basehttp 7 130033070888640 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:10:36,556 basehttp 7 130033087674048 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:10:36,557 basehttp 7 130033079281344 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:10:36,562 basehttp 7 130033444177600 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:10:36,562 basehttp 7 130033452570304 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:10:36,565 basehttp 7 130033460963008 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:10:36,596 basehttp 7 130033444177600 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:10:47,265 basehttp 7 130033444177600 "GET / HTTP/1.1" 200 100632
+WARNING 2025-07-09 14:10:47,292 basehttp 7 130033444177600 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:10:47,326 basehttp 7 130033460963008 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:10:47,326 basehttp 7 130033444177600 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:10:47,330 basehttp 7 130033452570304 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:10:47,331 basehttp 7 130033435784896 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:10:47,338 basehttp 7 130033079281344 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:10:47,339 basehttp 7 130033087674048 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:10:47,362 basehttp 7 130033444177600 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:10:47,363 basehttp 7 130033435784896 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:10:47,369 basehttp 7 130033087674048 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:10:47,370 basehttp 7 130033079281344 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:10:47,370 basehttp 7 130033452570304 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:10:47,371 basehttp 7 130033460963008 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:10:47,408 basehttp 7 130033460963008 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:11:23,643 basehttp 7 130033460963008 "GET /workflow-builder/ HTTP/1.1" 302 0
+WARNING 2025-07-09 14:11:23,657 log 7 130033460963008 Not Found: /accounts/login/
+WARNING 2025-07-09 14:11:23,657 basehttp 7 130033460963008 "GET /accounts/login/?next=/workflow-builder/ HTTP/1.1" 404 4090
+WARNING 2025-07-09 14:11:23,691 log 7 130033460963008 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-07-09 14:11:23,691 basehttp 7 130033460963008 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4165
+WARNING 2025-07-09 14:11:23,828 log 7 130033460963008 Not Found: /favicon.ico
+WARNING 2025-07-09 14:11:23,831 basehttp 7 130033460963008 "GET /favicon.ico HTTP/1.1" 404 4054
+WARNING 2025-07-09 14:11:35,190 basehttp 7 130033079281344 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:11:40,546 basehttp 7 130033079281344 "GET /workflow-builder HTTP/1.1" 301 0
+WARNING 2025-07-09 14:11:40,563 base 7 130033079281344 Session data corrupted
+INFO 2025-07-09 14:11:40,563 basehttp 7 130033079281344 "GET /workflow-builder/ HTTP/1.1" 302 0
+WARNING 2025-07-09 14:11:40,622 log 7 130033079281344 Not Found: /accounts/login/
+WARNING 2025-07-09 14:11:40,623 basehttp 7 130033079281344 "GET /accounts/login/?next=/workflow-builder/ HTTP/1.1" 404 4094
+WARNING 2025-07-09 14:12:08,635 base 7 130033079281344 Session data corrupted
+INFO 2025-07-09 14:12:08,636 basehttp 7 130033079281344 "GET /workflow-builder/ HTTP/1.1" 302 0
+WARNING 2025-07-09 14:12:08,692 log 7 130033079281344 Not Found: /accounts/login/
+WARNING 2025-07-09 14:12:08,692 basehttp 7 130033079281344 "GET /accounts/login/?next=/workflow-builder/ HTTP/1.1" 404 4094
+INFO 2025-07-09 14:12:30,177 autoreload 7 130033544223616 /app/apps/core/views.py changed, reloading.
+INFO 2025-07-09 14:12:30,560 autoreload 84 127633304550272 Watching for file changes with StatReloader
+WARNING 2025-07-09 14:12:31,296 log 84 127633221215936 Not Found: /accounts/login/
+WARNING 2025-07-09 14:12:31,296 basehttp 84 127633221215936 "GET /accounts/login/?next=/workflow-builder/ HTTP/1.1" 404 4094
+WARNING 2025-07-09 14:12:37,812 base 84 127633221215936 Session data corrupted
+ERROR 2025-07-09 14:12:37,822 log 84 127633221215936 Internal Server Error: /workflow-builder/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/core/views.py", line 21, in workflow_builder
+    return render(request, 'core/workflow_builder.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: core/workflow_builder.html
+ERROR 2025-07-09 14:12:37,823 basehttp 84 127633221215936 "GET /workflow-builder/ HTTP/1.1" 500 79402
+INFO 2025-07-09 14:13:00,784 basehttp 84 127633221215936 "GET /workflow-builder/ HTTP/1.1" 200 100632
+WARNING 2025-07-09 14:13:00,839 basehttp 84 127633221215936 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:13:00,857 basehttp 84 127633140479680 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:13:00,858 basehttp 84 127633132086976 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:13:00,865 basehttp 84 127633115301568 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:13:00,874 basehttp 84 127633123694272 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:13:00,886 basehttp 84 127633106908864 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:13:00,889 basehttp 84 127633132086976 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:13:00,893 basehttp 84 127633221215936 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:13:00,901 basehttp 84 127633115301568 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:13:00,912 basehttp 84 127633098516160 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:13:00,916 basehttp 84 127633123694272 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:13:00,917 basehttp 84 127633221215936 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:13:00,918 basehttp 84 127633106908864 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:13:00,921 basehttp 84 127633132086976 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+INFO 2025-07-09 14:13:12,796 basehttp 84 127633132086976 "GET /workflow-builder/ HTTP/1.1" 200 100632
+WARNING 2025-07-09 14:13:12,878 basehttp 84 127633132086976 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:13:12,884 basehttp 84 127633106908864 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:13:12,884 basehttp 84 127633221215936 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:13:12,893 basehttp 84 127633140479680 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:13:12,899 basehttp 84 127633123694272 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:13:12,913 basehttp 84 127633115301568 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:13:12,926 basehttp 84 127633106908864 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:13:12,930 basehttp 84 127633221215936 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:13:12,938 basehttp 84 127633132086976 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:13:12,940 basehttp 84 127633140479680 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:13:12,941 basehttp 84 127633123694272 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:13:12,950 basehttp 84 127633098516160 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:13:12,951 basehttp 84 127633221215936 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:13:12,963 basehttp 84 127633221215936 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:13:36,669 autoreload 7 124233429674880 Watching for file changes with StatReloader
+INFO 2025-07-09 14:13:38,915 basehttp 7 124233271211712 "GET /workflow-builder/ HTTP/1.1" 200 100632
+WARNING 2025-07-09 14:13:38,984 basehttp 7 124233246033600 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:13:38,985 basehttp 7 124233237640896 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:13:38,989 basehttp 7 124233229248192 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:13:38,995 basehttp 7 124233271211712 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:13:38,995 basehttp 7 124233254426304 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:13:38,996 basehttp 7 124233262819008 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:13:39,028 basehttp 7 124233246033600 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:13:39,035 basehttp 7 124233237640896 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:13:39,041 basehttp 7 124233220855488 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:13:39,042 basehttp 7 124233271211712 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:13:39,046 basehttp 7 124233262819008 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:13:39,050 basehttp 7 124233229248192 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:13:39,052 basehttp 7 124233246033600 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:13:39,062 basehttp 7 124233229248192 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:16:36,536 base 7 124233229248192 Session data corrupted
+ERROR 2025-07-09 14:16:36,553 log 7 124233229248192 Internal Server Error: /workflow-builder/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/core/views.py", line 21, in workflow_builder
+    return render(request, 'core/workflow_builder.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 226, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'title' appears more than once
+ERROR 2025-07-09 14:16:36,558 basehttp 7 124233229248192 "GET /workflow-builder/ HTTP/1.1" 500 208772
+WARNING 2025-07-09 14:17:36,743 base 7 124233229248192 Session data corrupted
+INFO 2025-07-09 14:17:36,744 basehttp 7 124233229248192 "GET /workflow-builder/ HTTP/1.1" 200 36825
+INFO 2025-07-09 14:17:36,787 basehttp 7 124233262819008 "GET /static/css/bootstrap_limitless.min.css HTTP/1.1" 200 103651
+INFO 2025-07-09 14:17:36,802 basehttp 7 124233229248192 "GET /static/icons/icomoon/styles.min.css HTTP/1.1" 200 45654
+WARNING 2025-07-09 14:17:36,809 basehttp 7 124233237640896 "GET /static/css/jointjs/joint.css HTTP/1.1" 404 1927
+INFO 2025-07-09 14:17:36,811 basehttp 7 124233262819008 "GET /static/css/odinsight.css HTTP/1.1" 200 562
+INFO 2025-07-09 14:17:36,815 basehttp 7 124233246033600 "GET /static/css/bootstrap.min.css HTTP/1.1" 200 285153
+INFO 2025-07-09 14:17:36,819 basehttp 7 124233271211712 "GET /static/css/layout.min.css HTTP/1.1" 200 31872
+INFO 2025-07-09 14:17:36,822 basehttp 7 124233229248192 "GET /static/images/placeholder.svg HTTP/1.1" 200 186
+INFO 2025-07-09 14:17:36,823 basehttp 7 124233254426304 "GET /static/css/components.min.css HTTP/1.1" 200 300901
+INFO 2025-07-09 14:17:36,831 basehttp 7 124233237640896 "GET /static/js/jquery/jquery.min.js HTTP/1.1" 200 89663
+WARNING 2025-07-09 14:17:36,846 basehttp 7 124233271211712 "GET /static/js/vendor/forms/styling/switchery.min.js HTTP/1.1" 404 1984
+INFO 2025-07-09 14:17:36,853 basehttp 7 124233246033600 "GET /static/js/vendor/forms/selects/bootstrap_multiselect.js HTTP/1.1" 200 74253
+INFO 2025-07-09 14:17:36,860 basehttp 7 124233254426304 "GET /static/js/vendor/pickers/daterangepicker.js HTTP/1.1" 200 66601
+INFO 2025-07-09 14:17:36,894 basehttp 7 124233246033600 "GET /static/vendor/jointjs/joint-plus.js HTTP/1.1" 304 0
+INFO 2025-07-09 14:17:36,902 basehttp 7 124233229248192 "GET /static/js/odinsight.js HTTP/1.1" 200 1327
+INFO 2025-07-09 14:17:36,921 basehttp 7 124233271211712 "GET /static/js/vendor/ui/moment/moment.min.js HTTP/1.1" 200 58103
+INFO 2025-07-09 14:17:36,932 basehttp 7 124233254426304 "GET /static/icons/icomoon/fonts/icomoon.woff?3p0rtw HTTP/1.1" 200 218304
+WARNING 2025-07-09 14:17:37,005 basehttp 7 124233246033600 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:17:37,009 basehttp 7 124233271211712 "GET /static/js/vendor/ui/moment/moment.min.js.map HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:17:51,553 base 7 124233254426304 Session data corrupted
+ERROR 2025-07-09 14:17:51,568 log 7 124233254426304 Internal Server Error: /workflow-builder/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/core/views.py", line 21, in workflow_builder
+    return render(request, 'core/workflow_builder.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 226, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'title' appears more than once
+ERROR 2025-07-09 14:17:51,571 basehttp 7 124233254426304 "GET /workflow-builder/ HTTP/1.1" 500 208772
+WARNING 2025-07-09 14:17:55,879 base 7 124233254426304 Session data corrupted
+ERROR 2025-07-09 14:17:55,894 log 7 124233254426304 Internal Server Error: /workflow-builder/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/core/views.py", line 21, in workflow_builder
+    return render(request, 'core/workflow_builder.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 226, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'title' appears more than once
+ERROR 2025-07-09 14:17:55,900 basehttp 7 124233254426304 "GET /workflow-builder/ HTTP/1.1" 500 208762
+WARNING 2025-07-09 14:17:58,754 base 7 124233254426304 Session data corrupted
+ERROR 2025-07-09 14:17:58,768 log 7 124233254426304 Internal Server Error: /workflow-builder/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/core/views.py", line 21, in workflow_builder
+    return render(request, 'core/workflow_builder.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 226, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'title' appears more than once
+ERROR 2025-07-09 14:17:58,773 basehttp 7 124233254426304 "GET /workflow-builder/ HTTP/1.1" 500 208768
+INFO 2025-07-09 14:18:01,258 basehttp 7 124233254426304 "GET /workflow-builder/ HTTP/1.1" 200 100632
+INFO 2025-07-09 14:18:01,297 basehttp 7 124233254426304 "GET /static/css/joint-plus.css HTTP/1.1" 304 0
+WARNING 2025-07-09 14:18:01,325 basehttp 7 124233237640896 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:18:01,326 basehttp 7 124233229248192 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:18:01,331 basehttp 7 124233262819008 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:18:01,334 basehttp 7 124233246033600 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:18:01,339 basehttp 7 124233271211712 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:18:01,376 basehttp 7 124233237640896 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:18:01,378 basehttp 7 124233262819008 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:18:01,387 basehttp 7 124233246033600 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:18:01,394 basehttp 7 124233254426304 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:18:01,396 basehttp 7 124233229248192 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:18:01,401 basehttp 7 124233220855488 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:18:01,404 basehttp 7 124233271211712 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:18:01,420 basehttp 7 124233220855488 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:18:01,424 basehttp 7 124233246033600 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-09 14:19:42,807 basehttp 7 124233246033600 "GET /workflow-builder/ HTTP/1.1" 200 106508
+WARNING 2025-07-09 14:19:42,879 basehttp 7 124233229248192 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:19:42,886 basehttp 7 124233271211712 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:19:42,886 basehttp 7 124233246033600 "GET /static/css/joint.css HTTP/1.1" 404 1903
+WARNING 2025-07-09 14:19:42,892 basehttp 7 124233262819008 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:19:42,898 basehttp 7 124233254426304 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:19:42,899 basehttp 7 124233220855488 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:19:42,926 basehttp 7 124233229248192 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:19:42,927 basehttp 7 124233246033600 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:19:42,936 basehttp 7 124233262819008 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:19:42,936 basehttp 7 124233254426304 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:19:42,938 basehttp 7 124233271211712 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:19:42,950 basehttp 7 124233220855488 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:19:42,957 basehttp 7 124233229248192 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:19:42,968 basehttp 7 124233254426304 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:19:42,973 basehttp 7 124233271211712 "GET /static/js/vendor/forms/styling/switchery.min.js HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:19:42,974 basehttp 7 124233220855488 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:19:42,979 basehttp 7 124233229248192 "GET /static/vendor/jointjs/joint.js HTTP/1.1" 404 1933
+INFO 2025-07-09 14:19:43,043 basehttp 7 124233229248192 "GET /static/fonts/inter/Inter-Light.woff2?v=3.18 HTTP/1.1" 200 104220
+WARNING 2025-07-09 14:19:43,090 basehttp 7 124233220855488 "GET /static/js/vendor/ui/moment/moment.min.js.map HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:19:43,091 basehttp 7 124233229248192 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:20:03,291 basehttp 7 124233229248192 "GET /workflow-builder/ HTTP/1.1" 200 106513
+WARNING 2025-07-09 14:20:03,357 basehttp 7 124233254426304 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:20:03,359 basehttp 7 124233271211712 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:20:03,360 basehttp 7 124233229248192 "GET /static/css/joint.css HTTP/1.1" 404 1903
+WARNING 2025-07-09 14:20:03,362 basehttp 7 124233220855488 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:20:03,369 basehttp 7 124233262819008 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:20:03,386 basehttp 7 124233246033600 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:20:03,395 basehttp 7 124233271211712 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:20:03,395 basehttp 7 124233229248192 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:20:03,411 basehttp 7 124233254426304 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:20:03,419 basehttp 7 124233262819008 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:20:03,427 basehttp 7 124233220855488 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:20:03,429 basehttp 7 124233246033600 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:20:03,440 basehttp 7 124233271211712 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:20:03,448 basehttp 7 124233262819008 "GET /static/js/vendor/forms/styling/switchery.min.js HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:20:03,450 basehttp 7 124233254426304 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:20:03,452 basehttp 7 124233229248192 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:20:03,506 basehttp 7 124233254426304 "GET /static/js/vendor/ui/moment/moment.min.js.map HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:20:03,506 basehttp 7 124233229248192 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:20:31,550 basehttp 7 124233229248192 "GET /workflow-builder/ HTTP/1.1" 200 106518
+WARNING 2025-07-09 14:20:31,613 basehttp 7 124233254426304 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:20:31,624 basehttp 7 124233229248192 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:20:31,631 basehttp 7 124233271211712 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:20:31,638 basehttp 7 124233262819008 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:20:31,639 basehttp 7 124233237640896 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:20:31,647 basehttp 7 124233246033600 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:20:31,657 basehttp 7 124233229248192 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:20:31,664 basehttp 7 124233271211712 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:20:31,678 basehttp 7 124233246033600 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:20:31,681 basehttp 7 124233262819008 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:20:31,685 basehttp 7 124233237640896 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:20:31,686 basehttp 7 124233254426304 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:20:31,690 basehttp 7 124233229248192 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:20:31,694 basehttp 7 124233271211712 "GET /static/js/vendor/forms/styling/switchery.min.js HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:20:31,703 basehttp 7 124233271211712 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:20:31,772 basehttp 7 124233229248192 "GET /static/js/vendor/ui/moment/moment.min.js.map HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:20:31,772 basehttp 7 124233271211712 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:22:00,268 basehttp 7 124233229248192 "GET /workflow-builder/ HTTP/1.1" 200 106518
+WARNING 2025-07-09 14:22:00,322 basehttp 7 124233229248192 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:22:00,333 basehttp 7 124233254426304 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:22:00,346 basehttp 7 124233246033600 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:22:00,350 basehttp 7 124233262819008 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:22:00,354 basehttp 7 124233271211712 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:22:00,365 basehttp 7 124233229248192 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:22:00,371 basehttp 7 124233237640896 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:22:00,379 basehttp 7 124233220855488 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:22:00,380 basehttp 7 124233246033600 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:22:00,387 basehttp 7 124233271211712 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:22:00,389 basehttp 7 124233229248192 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:22:00,395 basehttp 7 124233254426304 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:22:00,397 basehttp 7 124233220855488 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:22:00,421 basehttp 7 124233220855488 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:22:00,428 basehttp 7 124233254426304 "GET /static/js/vendor/forms/styling/switchery.min.js HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:22:00,530 basehttp 7 124233254426304 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:22:00,531 basehttp 7 124233220855488 "GET /static/js/vendor/ui/moment/moment.min.js.map HTTP/1.1" 404 1975
+INFO 2025-07-09 14:22:05,554 autoreload 7 128249157745536 Watching for file changes with StatReloader
+INFO 2025-07-09 14:22:06,780 basehttp 7 128249075066560 "GET /workflow-builder/ HTTP/1.1" 200 106518
+WARNING 2025-07-09 14:22:06,850 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:22:06,854 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:22:06,855 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:22:06,855 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:22:06,861 basehttp 7 128248998524608 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:22:06,864 basehttp 7 128249075066560 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:22:06,887 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:22:06,896 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:22:06,898 basehttp 7 128248955512512 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:22:06,903 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:22:06,907 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:22:06,924 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:22:06,924 basehttp 7 128248973346496 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:22:06,930 basehttp 7 128248981739200 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:22:06,936 basehttp 7 128248955512512 "GET /static/js/vendor/forms/styling/switchery.min.js HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:22:06,995 basehttp 7 128248981739200 "GET /static/js/vendor/ui/moment/moment.min.js.map HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:22:06,996 basehttp 7 128248955512512 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:22:32,892 basehttp 7 128248955512512 "GET /workflow-builder/ HTTP/1.1" 200 100632
+WARNING 2025-07-09 14:22:32,950 basehttp 7 128248981739200 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:22:32,951 basehttp 7 128248955512512 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:22:32,958 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:22:32,962 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:22:32,966 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:22:32,968 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:22:32,991 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:22:32,992 basehttp 7 128248955512512 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:22:33,000 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:22:33,001 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:22:33,002 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:22:33,002 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:22:33,009 basehttp 7 128248955512512 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:22:33,050 basehttp 7 128248955512512 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:22:56,418 basehttp 7 128248955512512 "GET /workflow-builder/ HTTP/1.1" 200 161451
+WARNING 2025-07-09 14:22:56,483 basehttp 7 128248955512512 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:22:56,491 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:22:56,493 basehttp 7 128248998524608 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:22:56,502 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:22:56,512 basehttp 7 128248955512512 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:22:56,513 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:22:56,516 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:22:56,517 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:22:56,527 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:22:56,536 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:22:56,550 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:22:56,555 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:22:56,556 basehttp 7 128248955512512 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:22:56,558 basehttp 7 128248998524608 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:22:56,571 basehttp 7 128248955512512 "GET /static/images/brands/youtube.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,572 basehttp 7 128249075066560 "GET /static/images/brands/twitter.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,574 basehttp 7 128248964953792 "GET /static/images/brands/spotify.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,572 basehttp 7 128248998524608 "GET /static/images/brands/facebook.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,573 basehttp 7 128248990131904 "GET /static/images/brands/amazon.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,575 basehttp 7 128248981739200 "GET /static/images/brands/bing.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,623 basehttp 7 128248955512512 "GET /static/images/brands/dribbble.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,631 basehttp 7 128248990131904 "GET /static/images/demo/users/face15.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,632 basehttp 7 128248998524608 "GET /static/images/demo/users/face8.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,641 basehttp 7 128248981739200 "GET /static/fonts/inter/Inter-ExtraBold.woff2?v=3.18 HTTP/1.1" 304 0
+WARNING 2025-07-09 14:22:56,643 log 7 128249075066560 Not Found: /workflow-builder/{% static 'images/demo/flat/1.png
+WARNING 2025-07-09 14:22:56,643 basehttp 7 128249075066560 "GET /workflow-builder/%7B%%20static%20'images/demo/flat/1.png HTTP/1.1" 404 4198
+WARNING 2025-07-09 14:22:56,644 log 7 128248964953792 Not Found: /workflow-builder/{% static 'images/demo/flat/21.png
+WARNING 2025-07-09 14:22:56,645 basehttp 7 128248964953792 "GET /workflow-builder/%7B%%20static%20'images/demo/flat/21.png HTTP/1.1" 404 4201
+WARNING 2025-07-09 14:22:56,663 log 7 128249075066560 Not Found: /workflow-builder/{% static 'images/demo/flat/18.png
+WARNING 2025-07-09 14:22:56,665 log 7 128248964953792 Not Found: /workflow-builder/{% static 'images/demo/flat/12.png
+WARNING 2025-07-09 14:22:56,666 basehttp 7 128249075066560 "GET /workflow-builder/%7B%%20static%20'images/demo/flat/18.png HTTP/1.1" 404 4201
+WARNING 2025-07-09 14:22:56,667 basehttp 7 128248964953792 "GET /workflow-builder/%7B%%20static%20'images/demo/flat/12.png HTTP/1.1" 404 4201
+INFO 2025-07-09 14:22:56,677 basehttp 7 128248964953792 "GET /static/images/demo/users/face2.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,678 basehttp 7 128248955512512 "GET /static/images/demo/users/face18.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,678 basehttp 7 128249075066560 "GET /static/images/demo/users/face7.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,687 basehttp 7 128248998524608 "GET /static/images/demo/users/face22.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,688 basehttp 7 128248990131904 "GET /static/images/demo/users/face14.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:22:56,703 basehttp 7 128248981739200 "GET /static/images/demo/users/face17.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:23:55,242 basehttp 7 128248981739200 "GET /workflow-builder/ HTTP/1.1" 200 41113
+WARNING 2025-07-09 14:23:55,309 basehttp 7 128248955512512 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:23:55,310 basehttp 7 128248981739200 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:23:55,311 basehttp 7 128248990131904 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:23:55,311 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:23:55,312 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:23:55,317 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:23:55,341 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:23:55,347 basehttp 7 128248955512512 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:23:55,348 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+INFO 2025-07-09 14:23:55,352 basehttp 7 128248955512512 "GET /static/images/logo_icon.svg HTTP/1.1" 304 0
+WARNING 2025-07-09 14:23:55,353 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:23:55,362 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:23:55,372 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:23:55,374 basehttp 7 128248973346496 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:23:55,380 basehttp 7 128249075066560 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:24:32,729 basehttp 7 128248955512512 "GET /workflow-builder/ HTTP/1.1" 200 41076
+WARNING 2025-07-09 14:24:32,798 basehttp 7 128249075066560 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:24:32,801 basehttp 7 128248955512512 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:24:32,806 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:24:32,813 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:24:32,818 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:24:32,828 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:24:32,835 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:24:32,846 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:24:32,847 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:24:32,848 basehttp 7 128248955512512 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:24:32,850 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:24:32,854 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:24:32,859 basehttp 7 128248964953792 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:24:32,871 basehttp 7 128248964953792 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:25:21,246 basehttp 7 128248964953792 "GET /workflow-builder/ HTTP/1.1" 200 41076
+WARNING 2025-07-09 14:25:21,314 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:25:21,351 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:25:21,357 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:25:21,357 basehttp 7 128248964953792 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:25:21,368 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:25:21,376 basehttp 7 128249075066560 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:25:21,377 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:25:21,407 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:25:21,407 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:25:21,407 basehttp 7 128248955512512 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:25:21,417 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:25:21,418 basehttp 7 128248990131904 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:25:21,424 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:25:21,425 basehttp 7 128248973346496 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-09 14:25:37,961 basehttp 7 128248973346496 "GET /workflow-builder/ HTTP/1.1" 200 41113
+WARNING 2025-07-09 14:25:38,014 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:25:38,014 basehttp 7 128248973346496 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:25:38,023 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:25:38,024 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:25:38,029 basehttp 7 128249075066560 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:25:38,030 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:25:38,050 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:25:38,052 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:25:38,068 basehttp 7 128248955512512 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:25:38,068 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:25:38,069 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:25:38,074 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:25:38,078 basehttp 7 128248964953792 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:25:38,086 basehttp 7 128248964953792 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:26:22,350 basehttp 7 128248964953792 "GET /workflow-builder/ HTTP/1.1" 200 41156
+WARNING 2025-07-09 14:26:22,415 basehttp 7 128249075066560 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:26:22,416 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:26:22,417 basehttp 7 128248964953792 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:26:22,419 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:26:22,420 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:26:22,431 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:26:22,437 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:26:22,449 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:26:22,456 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:26:22,460 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:26:22,463 basehttp 7 128248964953792 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:26:22,466 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:26:22,467 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:26:22,507 basehttp 7 128249075066560 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:26:57,369 basehttp 7 128249075066560 "GET /workflow-builder/ HTTP/1.1" 200 41137
+WARNING 2025-07-09 14:26:57,458 basehttp 7 128248998524608 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:26:57,458 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:26:57,460 basehttp 7 128249075066560 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:26:57,461 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:26:57,462 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:26:57,466 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:26:57,497 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:26:57,498 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:26:57,503 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:26:57,514 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:26:57,519 basehttp 7 128248981739200 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:26:57,524 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:26:57,529 basehttp 7 128248964953792 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:26:57,531 basehttp 7 128248981739200 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:27:40,859 basehttp 7 128248964953792 "GET /workflow-builder/ HTTP/1.1" 200 59792
+WARNING 2025-07-09 14:27:40,934 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:27:40,936 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:27:40,938 basehttp 7 128248964953792 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:27:40,940 basehttp 7 128248973346496 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:27:40,941 basehttp 7 128248981739200 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:27:40,944 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:27:40,972 basehttp 7 128249075066560 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:27:40,978 basehttp 7 128248947119808 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:27:40,982 basehttp 7 128248990131904 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:27:40,983 basehttp 7 128248955512512 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:27:40,984 basehttp 7 128248998524608 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:27:40,993 basehttp 7 128248964953792 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:27:41,001 basehttp 7 128249075066560 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:27:41,015 basehttp 7 128249075066560 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:30:43,887 autoreload 7 127693404736384 Watching for file changes with StatReloader
+INFO 2025-07-09 14:30:45,546 basehttp 7 127693321397952 "GET /workflow-builder/ HTTP/1.1" 200 59792
+WARNING 2025-07-09 14:30:45,614 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:30:45,618 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:30:45,619 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:30:45,619 basehttp 7 127693321397952 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:30:45,628 basehttp 7 127693313005248 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:30:45,632 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:30:45,656 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:30:45,657 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:30:45,659 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:30:45,663 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:30:45,671 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:30:45,671 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:30:45,685 basehttp 7 127693313005248 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:30:45,685 basehttp 7 127692926084800 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:31:41,084 basehttp 7 127692926084800 "GET / HTTP/1.1" 200 59791
+WARNING 2025-07-09 14:31:41,129 basehttp 7 127692926084800 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:31:41,175 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:31:41,175 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:31:41,189 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:31:41,189 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:31:41,203 basehttp 7 127692926084800 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:31:41,213 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:31:41,215 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:31:41,221 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:31:41,233 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:31:41,234 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:31:41,236 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:31:41,237 basehttp 7 127693303563968 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:31:41,255 basehttp 7 127693303563968 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:34:42,224 basehttp 7 127693303563968 "GET / HTTP/1.1" 200 59791
+WARNING 2025-07-09 14:34:42,280 basehttp 7 127693303563968 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:34:42,283 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:34:42,285 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:34:42,285 basehttp 7 127693295171264 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:34:42,294 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:34:42,311 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:34:42,334 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:34:42,336 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:34:42,340 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:34:42,342 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:34:42,343 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:34:42,343 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:34:42,359 basehttp 7 127693313005248 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:34:42,360 basehttp 7 127693286778560 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-09 14:34:44,367 basehttp 7 127693286778560 "GET / HTTP/1.1" 200 59791
+WARNING 2025-07-09 14:34:44,412 basehttp 7 127693313005248 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:34:44,413 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:34:44,423 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:34:44,426 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:34:44,431 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:34:44,437 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:34:44,438 basehttp 7 127693286778560 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:34:44,450 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:34:44,455 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:34:44,456 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:34:44,464 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:34:44,469 basehttp 7 127693303563968 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:34:44,472 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:34:44,512 basehttp 7 127693321397952 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:39:33,614 basehttp 7 127693321397952 "GET / HTTP/1.1" 200 59791
+WARNING 2025-07-09 14:39:33,673 basehttp 7 127693303563968 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:39:33,674 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:39:33,675 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:39:33,675 basehttp 7 127693321397952 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:39:33,675 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:39:33,684 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:39:33,720 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:39:33,726 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:39:33,727 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:39:33,728 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+INFO 2025-07-09 14:39:33,732 basehttp 7 127693303563968 "GET /static/images/logo_icon.svg HTTP/1.1" 304 0
+WARNING 2025-07-09 14:39:33,732 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:39:33,737 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:39:33,743 basehttp 7 127693313005248 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:39:33,754 basehttp 7 127693286778560 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:39:35,266 basehttp 7 127693303563968 "GET / HTTP/1.1" 200 59791
+WARNING 2025-07-09 14:39:35,315 basehttp 7 127693303563968 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:39:35,325 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:39:35,328 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:39:35,334 basehttp 7 127693286778560 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:39:35,339 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:39:35,357 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:39:35,361 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:39:35,361 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:39:35,377 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:39:35,383 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:39:35,386 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:39:35,387 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:39:35,388 basehttp 7 127693303563968 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:39:35,409 basehttp 7 127693303563968 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:39:42,099 basehttp 7 127693303563968 "GET /workflow-builder/ HTTP/1.1" 200 31662
+WARNING 2025-07-09 14:39:42,168 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:39:42,168 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:39:42,170 basehttp 7 127693303563968 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:39:42,172 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:39:42,181 basehttp 7 127692934477504 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:39:42,189 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:39:42,198 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:39:42,198 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:39:42,203 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:39:42,214 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:39:42,214 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:39:42,217 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:39:42,218 basehttp 7 127693313005248 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:40:03,794 basehttp 7 127693313005248 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:43:35,230 basehttp 7 127693313005248 "GET /workflow-builder/ HTTP/1.1" 200 31634
+WARNING 2025-07-09 14:43:35,293 basehttp 7 127693313005248 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:43:35,295 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:43:35,301 basehttp 7 127692926084800 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:43:35,306 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:43:35,314 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:43:35,322 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:43:35,338 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:43:35,348 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:43:35,348 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+INFO 2025-07-09 14:43:35,362 basehttp 7 127692926084800 "GET /static/vendor/jointjs/joint-plus.js HTTP/1.1" 304 0
+WARNING 2025-07-09 14:43:35,365 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:43:35,366 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:43:35,370 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:43:35,373 basehttp 7 127693286778560 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:43:35,382 basehttp 7 127693295171264 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 14:43:43,382 log 7 127692926084800 Not Found: /workflow-builder/index.html
+WARNING 2025-07-09 14:43:43,382 basehttp 7 127692926084800 "GET /workflow-builder/index.html HTTP/1.1" 404 4106
+WARNING 2025-07-09 14:43:44,339 basehttp 7 127692926084800 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:47:30,399 basehttp 7 127692926084800 "GET /workflow-builder/ HTTP/1.1" 200 32038
+INFO 2025-07-09 14:47:30,436 basehttp 7 127692926084800 "GET /static/fonts/inter/inter.css HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,438 basehttp 7 127693303563968 "GET /static/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,438 basehttp 7 127693321397952 "GET /static/js/bootstrap/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,439 basehttp 7 127693295171264 "GET /static/icons/phosphor/styles.min.css HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,440 basehttp 7 127693313005248 "GET /static/js/vendor/visualization/d3/d3.min.js HTTP/1.1" 304 0
+WARNING 2025-07-09 14:47:30,446 basehttp 7 127693286778560 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+INFO 2025-07-09 14:47:30,451 basehttp 7 127693286778560 "GET /static/js/vendor/visualization/d3/d3_tooltip.js HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,488 basehttp 7 127693313005248 "GET /static/js/app.js HTTP/1.1" 304 0
+WARNING 2025-07-09 14:47:30,505 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:47:30,507 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:47:30,507 basehttp 7 127693303563968 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:47:30,512 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:47:30,521 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:47:30,534 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:47:30,537 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:47:30,543 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+INFO 2025-07-09 14:47:30,551 basehttp 7 127693313005248 "GET /static/images/demo/logos/1.svg HTTP/1.1" 304 0
+WARNING 2025-07-09 14:47:30,555 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:47:30,556 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:47:30,563 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:47:30,564 basehttp 7 127693286778560 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-09 14:47:30,574 basehttp 7 127693295171264 "GET /static/images/demo/logos/2.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,583 basehttp 7 127693321397952 "GET /static/images/demo/logos/4.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,583 basehttp 7 127693286778560 "GET /static/images/demo/logos/3.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,585 basehttp 7 127692926084800 "GET /static/images/demo/users/face10.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,587 basehttp 7 127693303563968 "GET /static/images/demo/users/face3.jpg HTTP/1.1" 304 0
+WARNING 2025-07-09 14:47:30,614 basehttp 7 127693313005248 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:47:30,618 basehttp 7 127693313005248 "GET /static/images/demo/users/face24.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,625 basehttp 7 127693295171264 "GET /static/images/demo/users/face4.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,643 basehttp 7 127693303563968 "GET /static/images/demo/users/face25.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,644 basehttp 7 127693286778560 "GET /static/images/brands/holiday-inn.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,645 basehttp 7 127692926084800 "GET /static/images/brands/adobe.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,646 basehttp 7 127693321397952 "GET /static/images/brands/ing.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,671 basehttp 7 127693313005248 "GET /static/icons/phosphor/fonts/Phosphor.ttf?9jjo3j HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,671 basehttp 7 127693295171264 "GET /static/fonts/inter/Inter-SemiBold.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,697 basehttp 7 127693303563968 "GET /static/fonts/inter/Inter-Regular.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,703 basehttp 7 127693286778560 "GET /static/fonts/inter/Inter-Bold.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,703 basehttp 7 127693321397952 "GET /static/fonts/inter/Inter-Medium.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,709 basehttp 7 127692926084800 "GET /static/images/demo/users/face11.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,720 basehttp 7 127693295171264 "GET /static/images/demo/users/face12.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,721 basehttp 7 127693313005248 "GET /static/images/demo/users/face1.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,748 basehttp 7 127693303563968 "GET /static/images/demo/users/face13.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 14:47:30,748 basehttp 7 127693321397952 "GET /static/images/icons/pdf.svg HTTP/1.1" 304 0
+INFO 2025-07-09 14:57:23,535 basehttp 7 127692926084800 "GET /workflow-builder/ HTTP/1.1" 200 34719
+WARNING 2025-07-09 14:57:23,596 basehttp 7 127693321397952 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:57:23,598 basehttp 7 127692926084800 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:57:23,600 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:57:23,604 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:57:23,618 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:57:23,621 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:57:23,628 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+INFO 2025-07-09 14:57:23,641 basehttp 7 127692926084800 "GET /static/images/logo_icon.svg HTTP/1.1" 304 0
+WARNING 2025-07-09 14:57:23,641 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:57:23,641 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:57:23,644 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:57:23,647 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:57:23,655 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:57:23,656 basehttp 7 127693313005248 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-09 14:57:23,670 basehttp 7 127692934477504 "GET /static/vendor/jointjs/joint-plus.js HTTP/1.1" 304 0
+INFO 2025-07-09 14:57:25,510 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 34719
+WARNING 2025-07-09 14:57:25,558 basehttp 7 127692926084800 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:57:25,565 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:57:25,567 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:57:25,568 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:57:25,570 basehttp 7 127692934477504 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:57:25,574 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:57:25,598 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:57:25,602 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:57:25,603 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:57:25,604 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:57:25,605 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:57:25,613 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:57:25,613 basehttp 7 127693321397952 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:57:27,176 basehttp 7 127693321397952 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:57:45,878 basehttp 7 127693321397952 "GET /workflow-builder/ HTTP/1.1" 200 34719
+WARNING 2025-07-09 14:57:45,937 basehttp 7 127693321397952 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:57:45,947 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:57:45,949 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 14:57:45,950 basehttp 7 127693313005248 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 14:57:45,964 basehttp 7 127692926084800 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 14:57:45,973 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 14:57:45,985 basehttp 7 127692917692096 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:57:45,990 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 14:57:45,991 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:57:45,993 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 14:57:46,003 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 14:57:46,011 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 14:57:46,016 basehttp 7 127692934477504 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 14:57:46,069 basehttp 7 127692934477504 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 14:58:45,968 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 27826
+INFO 2025-07-09 15:00:08,456 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 27826
+INFO 2025-07-09 15:35:42,407 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 33319
+INFO 2025-07-09 15:35:49,261 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 33319
+INFO 2025-07-09 15:37:18,130 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 15:43:33,182 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 45233
+INFO 2025-07-09 16:09:48,839 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 48911
+INFO 2025-07-09 16:11:11,305 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 48803
+WARNING 2025-07-09 16:13:40,313 base 7 127692934477504 Session data corrupted
+ERROR 2025-07-09 16:13:40,327 log 7 127692934477504 Internal Server Error: /workflow-builder/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'extend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/core/views.py", line 21, in workflow_builder
+    return render(request, 'core/workflow_builder.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 1: 'extend'. Did you forget to register or load this tag?
+ERROR 2025-07-09 16:13:40,329 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 500 143698
+WARNING 2025-07-09 16:13:56,802 base 7 127692934477504 Session data corrupted
+ERROR 2025-07-09 16:13:56,814 log 7 127692934477504 Internal Server Error: /workflow-builder/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'loadstatic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/core/views.py", line 21, in workflow_builder
+    return render(request, 'core/workflow_builder.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 2: 'loadstatic'. Did you forget to register or load this tag?
+ERROR 2025-07-09 16:13:56,816 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 500 158765
+INFO 2025-07-09 16:14:14,078 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 70586
+INFO 2025-07-09 16:14:14,124 basehttp 7 127692934477504 "GET /static/fonts/inter/inter.css HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,128 basehttp 7 127693321397952 "GET /static/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,128 basehttp 7 127693286778560 "GET /static/icons/phosphor/styles.min.css HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,130 basehttp 7 127693303563968 "GET /static/js/bootstrap/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,133 basehttp 7 127692926084800 "GET /static/js/vendor/visualization/d3/d3.min.js HTTP/1.1" 304 0
+WARNING 2025-07-09 16:14:14,140 basehttp 7 127693295171264 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+INFO 2025-07-09 16:14:14,150 basehttp 7 127693295171264 "GET /static/js/vendor/visualization/d3/d3_tooltip.js HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,187 basehttp 7 127693286778560 "GET /static/js/app.js HTTP/1.1" 304 0
+WARNING 2025-07-09 16:14:14,205 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 16:14:14,206 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 16:14:14,212 basehttp 7 127692934477504 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 16:14:14,216 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 16:14:14,217 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 16:14:14,248 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 16:14:14,255 basehttp 7 127692917692096 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+INFO 2025-07-09 16:14:14,262 basehttp 7 127693303563968 "GET /static/images/logo_icon.svg HTTP/1.1" 304 0
+WARNING 2025-07-09 16:14:14,263 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 16:14:14,271 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 16:14:14,284 basehttp 7 127693321397952 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 16:14:14,286 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 16:14:14,286 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 16:14:14,291 basehttp 7 127692934477504 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-09 16:14:14,301 basehttp 7 127693295171264 "GET /static/images/demo/logos/1.svg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,315 basehttp 7 127693321397952 "GET /static/images/demo/logos/2.svg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,315 basehttp 7 127693286778560 "GET /static/images/demo/logos/3.svg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,320 basehttp 7 127692926084800 "GET /static/images/demo/logos/4.svg HTTP/1.1" 304 0
+WARNING 2025-07-09 16:14:14,322 basehttp 7 127692934477504 "GET /static/vendor/jointjs/joint-plus.js.js HTTP/1.1" 404 1957
+INFO 2025-07-09 16:14:14,324 basehttp 7 127693303563968 "GET /static/images/demo/users/face11.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,335 basehttp 7 127692934477504 "GET /static/images/demo/users/face10.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,355 basehttp 7 127693295171264 "GET /static/icons/phosphor/fonts/Phosphor.ttf?9jjo3j HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,368 basehttp 7 127693286778560 "GET /static/fonts/inter/Inter-SemiBold.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,368 basehttp 7 127692926084800 "GET /static/fonts/inter/Inter-Regular.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,376 basehttp 7 127693321397952 "GET /static/images/demo/users/face3.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,385 basehttp 7 127693303563968 "GET /static/fonts/inter/Inter-Bold.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,385 basehttp 7 127692934477504 "GET /static/fonts/inter/Inter-Medium.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,416 basehttp 7 127693286778560 "GET /static/images/demo/users/face25.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,417 basehttp 7 127693295171264 "GET /static/images/demo/users/face4.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,418 basehttp 7 127692926084800 "GET /static/images/demo/users/face24.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,433 basehttp 7 127693321397952 "GET /static/images/demo/users/face12.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,433 basehttp 7 127693303563968 "GET /static/images/icons/pdf.svg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,434 basehttp 7 127692934477504 "GET /static/images/demo/users/face1.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,461 basehttp 7 127693286778560 "GET /static/images/demo/users/face13.jpg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,484 basehttp 7 127692926084800 "GET /static/images/brands/holiday-inn.svg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,484 basehttp 7 127693295171264 "GET /static/images/brands/adobe.svg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:14,496 basehttp 7 127692934477504 "GET /static/images/brands/ing.svg HTTP/1.1" 304 0
+INFO 2025-07-09 16:14:53,566 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 70662
+INFO 2025-07-09 16:14:53,614 basehttp 7 127692934477504 "GET /static/css/joint-plus.css HTTP/1.1" 304 0
+WARNING 2025-07-09 16:14:53,627 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 16:14:53,629 basehttp 7 127693295171264 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 16:14:53,630 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 16:14:53,632 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 16:14:53,632 basehttp 7 127692926084800 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 16:14:53,654 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 16:14:53,661 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 16:14:53,663 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 16:14:53,685 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 16:14:53,692 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 16:14:53,694 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 16:14:53,696 basehttp 7 127693321397952 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 16:14:53,699 basehttp 7 127693303563968 "GET /static/vendor/jointjs/joint-plus.js.js HTTP/1.1" 404 1957
+WARNING 2025-07-09 16:14:53,700 basehttp 7 127692934477504 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 16:14:53,756 basehttp 7 127692934477504 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 16:14:54,605 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 70662
+WARNING 2025-07-09 16:14:54,662 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 16:14:54,662 basehttp 7 127693303563968 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 16:14:54,669 basehttp 7 127692934477504 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 16:14:54,672 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 16:14:54,678 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 16:14:54,687 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 16:14:54,689 basehttp 7 127693295171264 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 16:14:54,696 basehttp 7 127692917692096 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 16:14:54,702 basehttp 7 127693286778560 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 16:14:54,702 basehttp 7 127693303563968 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 16:14:54,724 basehttp 7 127693321397952 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 16:14:54,726 basehttp 7 127692926084800 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 16:14:54,730 basehttp 7 127693295171264 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 16:14:54,734 basehttp 7 127692934477504 "GET /static/vendor/jointjs/joint-plus.js.js HTTP/1.1" 404 1957
+WARNING 2025-07-09 16:14:54,775 basehttp 7 127692934477504 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 16:16:48,255 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 2168
+INFO 2025-07-09 16:16:49,024 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 2168
+INFO 2025-07-09 16:16:54,420 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 2168
+WARNING 2025-07-09 16:17:15,044 base 7 127692934477504 Session data corrupted
+ERROR 2025-07-09 16:17:15,059 log 7 127692934477504 Internal Server Error: /workflow-builder/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/core/views.py", line 21, in workflow_builder
+    return render(request, 'core/workflow_builder.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.11/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-07-09 16:17:15,063 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 500 152012
+INFO 2025-07-09 16:18:15,018 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 34799
+WARNING 2025-07-09 16:46:08,581 base 7 127692934477504 Session data corrupted
+ERROR 2025-07-09 16:46:08,593 log 7 127692934477504 Internal Server Error: /workflow-builder/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/core/views.py", line 21, in workflow_builder
+    return render(request, 'core/workflow_builder.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 518, in parse
+    self.unclosed_block_tag(parse_until)
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 581, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 34: 'block'. Looking for one of: endblock.
+ERROR 2025-07-09 16:46:08,596 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 500 155800
+INFO 2025-07-09 16:46:31,377 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 4976
+INFO 2025-07-09 16:46:31,409 basehttp 7 127692934477504 "GET /static/css/joint-plus.css HTTP/1.1" 304 0
+INFO 2025-07-09 16:46:31,409 basehttp 7 127693295171264 "GET /static/vendor/jointjs/joint-plus.js HTTP/1.1" 304 0
+INFO 2025-07-09 16:46:50,530 basehttp 7 127693295171264 "GET /workflow-builder/ HTTP/1.1" 200 4976
+INFO 2025-07-09 16:49:34,392 basehttp 7 127693295171264 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 16:59:16,991 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 16:59:24,358 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 16:59:25,606 basehttp 7 127692934477504 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:00:34,817 autoreload 7 139497172331392 Watching for file changes with StatReloader
+INFO 2025-07-09 17:00:36,394 basehttp 7 139497089001152 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:00:37,449 basehttp 7 139497089001152 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:00:37,979 basehttp 7 139497089001152 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:00:38,210 basehttp 7 139497089001152 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:00:38,392 basehttp 7 139497089001152 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:01:19,127 basehttp 7 139497089001152 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:01:22,339 basehttp 7 139497079559872 "GET /workflow-builder/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:01:43,731 autoreload 7 139497172331392 /app/apps/core/urls.py changed, reloading.
+INFO 2025-07-09 17:01:44,036 autoreload 11 123632776440704 Watching for file changes with StatReloader
+INFO 2025-07-09 17:01:47,293 basehttp 11 123632694060736 "GET /workflow-builder2/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:01:55,531 basehttp 11 123632694060736 "GET /workflow-builder2/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:01:59,349 basehttp 11 123632694060736 "GET /workflow-builder2/ HTTP/1.1" 200 34799
+WARNING 2025-07-09 17:04:23,584 log 11 123632684619456 Not Found: /workflow-builder/
+WARNING 2025-07-09 17:04:23,585 basehttp 11 123632684619456 "GET /workflow-builder/ HTTP/1.1" 404 4077
+INFO 2025-07-09 17:04:28,136 basehttp 11 123632684619456 "GET /workflow-builder2/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:04:41,352 basehttp 11 123632684619456 "GET /workflow-builder2/ HTTP/1.1" 200 6383
+INFO 2025-07-09 17:04:41,391 basehttp 11 123632676226752 "GET /static/vendor/jointjs/joint-plus.js HTTP/1.1" 200 910999
+INFO 2025-07-09 17:04:41,391 basehttp 11 123632684619456 "GET /static/css/joint-plus.css HTTP/1.1" 200 415639
+INFO 2025-07-09 17:05:07,013 basehttp 11 123632676226752 "GET /workflow-builder2/ HTTP/1.1" 200 34799
+INFO 2025-07-09 17:05:58,349 basehttp 11 123632676226752 "GET /workflow-builder2/ HTTP/1.1" 200 35836
+INFO 2025-07-09 17:05:58,377 basehttp 11 123632676226752 "GET /static/fonts/inter/inter.css HTTP/1.1" 200 2595
+INFO 2025-07-09 17:05:58,383 basehttp 11 123632684619456 "GET /static/icons/phosphor/styles.min.css HTTP/1.1" 200 42909
+INFO 2025-07-09 17:05:58,399 basehttp 11 123632676226752 "GET /static/js/vendor/visualization/d3/d3_tooltip.js HTTP/1.1" 200 8383
+INFO 2025-07-09 17:05:58,401 basehttp 11 123632311334592 "GET /static/js/bootstrap/bootstrap.bundle.min.js HTTP/1.1" 200 80496
+INFO 2025-07-09 17:05:58,406 basehttp 11 123632684619456 "GET /static/js/app.js HTTP/1.1" 200 23493
+WARNING 2025-07-09 17:05:58,410 basehttp 11 123632659441344 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+INFO 2025-07-09 17:05:58,412 basehttp 11 123632302941888 "GET /static/js/vendor/visualization/d3/d3.min.js HTTP/1.1" 200 151725
+WARNING 2025-07-09 17:05:58,430 basehttp 11 123632659441344 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 17:05:58,433 basehttp 11 123632684619456 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+INFO 2025-07-09 17:05:58,436 basehttp 11 123632667834048 "GET /static/css/all.min.css HTTP/1.1" 200 721580
+WARNING 2025-07-09 17:05:58,455 basehttp 11 123632659441344 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:05:58,455 basehttp 11 123632311334592 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 17:05:58,455 basehttp 11 123632684619456 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:05:58,458 basehttp 11 123632676226752 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 17:05:58,483 basehttp 11 123632684619456 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+INFO 2025-07-09 17:05:58,484 basehttp 11 123632667834048 "GET /static/images/logo_icon.svg HTTP/1.1" 200 13272
+WARNING 2025-07-09 17:05:58,491 basehttp 11 123632676226752 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 17:05:58,493 basehttp 11 123632302941888 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 17:05:58,493 basehttp 11 123632311334592 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 17:05:58,495 basehttp 11 123632659441344 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+INFO 2025-07-09 17:05:58,501 basehttp 11 123632684619456 "GET /static/images/demo/logos/1.svg HTTP/1.1" 200 1993
+WARNING 2025-07-09 17:05:58,506 basehttp 11 123632667834048 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-09 17:05:58,520 basehttp 11 123632311334592 "GET /static/images/demo/logos/4.svg HTTP/1.1" 200 2097
+INFO 2025-07-09 17:05:58,524 basehttp 11 123632667834048 "GET /static/images/demo/logos/3.svg HTTP/1.1" 200 1690
+INFO 2025-07-09 17:05:58,525 basehttp 11 123632684619456 "GET /static/images/demo/logos/2.svg HTTP/1.1" 200 1760
+WARNING 2025-07-09 17:05:58,525 basehttp 11 123632659441344 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 17:05:58,528 basehttp 11 123632676226752 "GET /static/images/demo/users/face10.jpg HTTP/1.1" 200 54483
+INFO 2025-07-09 17:05:58,531 basehttp 11 123632311334592 "GET /static/images/demo/users/face24.jpg HTTP/1.1" 200 51103
+INFO 2025-07-09 17:05:58,536 basehttp 11 123632302941888 "GET /static/images/demo/users/face3.jpg HTTP/1.1" 200 80247
+INFO 2025-07-09 17:05:58,539 basehttp 11 123632676226752 "GET /static/images/demo/users/face4.jpg HTTP/1.1" 200 79195
+INFO 2025-07-09 17:05:58,541 basehttp 11 123632302941888 "GET /static/images/brands/ing.svg HTTP/1.1" 200 41661
+INFO 2025-07-09 17:05:58,542 basehttp 11 123632684619456 "GET /static/images/demo/users/face25.jpg HTTP/1.1" 200 53765
+INFO 2025-07-09 17:05:58,543 basehttp 11 123632667834048 "GET /static/images/brands/adobe.svg HTTP/1.1" 200 601
+INFO 2025-07-09 17:05:58,543 basehttp 11 123632676226752 "GET /static/images/demo/users/face11.jpg HTTP/1.1" 200 61159
+INFO 2025-07-09 17:05:58,546 basehttp 11 123632311334592 "GET /static/images/brands/holiday-inn.svg HTTP/1.1" 200 3240
+INFO 2025-07-09 17:05:58,553 basehttp 11 123632302941888 "GET /static/images/icons/pdf.svg HTTP/1.1" 200 2018
+INFO 2025-07-09 17:05:58,558 basehttp 11 123632676226752 "GET /static/images/demo/users/face1.jpg HTTP/1.1" 200 54766
+INFO 2025-07-09 17:05:58,561 basehttp 11 123632684619456 "GET /static/images/demo/users/face12.jpg HTTP/1.1" 200 53071
+INFO 2025-07-09 17:05:58,568 basehttp 11 123632659441344 "GET /static/images/demo/users/face13.jpg HTTP/1.1" 200 64652
+INFO 2025-07-09 17:05:58,591 basehttp 11 123632676226752 "GET /static/fonts/inter/Inter-Regular.woff2?v=3.18 HTTP/1.1" 200 98844
+INFO 2025-07-09 17:05:58,594 basehttp 11 123632311334592 "GET /static/fonts/inter/Inter-Bold.woff2?v=3.18 HTTP/1.1" 200 105912
+INFO 2025-07-09 17:05:58,595 basehttp 11 123632684619456 "GET /static/fonts/inter/Inter-SemiBold.woff2?v=3.18 HTTP/1.1" 200 105980
+INFO 2025-07-09 17:05:58,597 basehttp 11 123632302941888 "GET /static/fonts/inter/Inter-Medium.woff2?v=3.18 HTTP/1.1" 200 105616
+INFO 2025-07-09 17:05:58,602 basehttp 11 123632659441344 "GET /static/icons/phosphor/fonts/Phosphor.ttf?9jjo3j HTTP/1.1" 200 302684
+INFO 2025-07-09 17:07:42,270 basehttp 11 123632659441344 "GET /workflow-builder2/ HTTP/1.1" 200 36346
+WARNING 2025-07-09 17:07:42,331 basehttp 11 123632302941888 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 17:07:42,331 basehttp 11 123632659441344 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 17:07:42,333 basehttp 11 123632676226752 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 17:07:42,344 basehttp 11 123632667834048 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:07:42,345 basehttp 11 123632311334592 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 17:07:42,352 basehttp 11 123632684619456 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:07:42,359 basehttp 11 123632676226752 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 17:07:42,361 basehttp 11 123632659441344 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 17:07:42,377 basehttp 11 123632684619456 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 17:07:42,378 basehttp 11 123632302941888 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 17:07:42,389 basehttp 11 123632676226752 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 17:07:42,391 basehttp 11 123632659441344 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 17:07:42,393 basehttp 11 123632667834048 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+WARNING 2025-07-09 17:07:42,393 basehttp 11 123632311334592 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+INFO 2025-07-09 17:07:44,143 basehttp 11 123632311334592 "GET /workflow-builder2/ HTTP/1.1" 200 36346
+WARNING 2025-07-09 17:07:44,186 basehttp 11 123632676226752 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 17:07:44,188 basehttp 11 123632667834048 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 17:07:44,191 basehttp 11 123632659441344 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 17:07:44,198 basehttp 11 123632302941888 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:07:44,201 basehttp 11 123632684619456 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:07:44,208 basehttp 11 123632311334592 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 17:07:44,226 basehttp 11 123632667834048 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 17:07:44,227 basehttp 11 123632676226752 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 17:07:44,238 basehttp 11 123632294549184 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 17:07:44,238 basehttp 11 123632302941888 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 17:07:44,240 basehttp 11 123632659441344 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 17:07:44,244 basehttp 11 123632311334592 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 17:07:44,245 basehttp 11 123632676226752 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 17:07:44,273 basehttp 11 123632676226752 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 17:08:11,589 basehttp 11 123632694060736 "GET /workflow-builder2/ HTTP/1.1" 200 6382
+INFO 2025-07-09 17:08:11,632 basehttp 11 123632694060736 "GET /static/css/joint-plus.css HTTP/1.1" 200 415639
+INFO 2025-07-09 17:08:11,646 basehttp 11 123632676226752 "GET /static/vendor/jointjs/joint-plus.js HTTP/1.1" 200 910999
+INFO 2025-07-09 17:09:32,744 basehttp 11 123632676226752 "GET /workflow-builder2/ HTTP/1.1" 200 6382
+INFO 2025-07-09 17:09:33,810 basehttp 11 123632676226752 "GET /workflow-builder2/ HTTP/1.1" 200 6382
+INFO 2025-07-09 17:09:40,165 basehttp 11 123632676226752 "GET / HTTP/1.1" 200 64660
+INFO 2025-07-09 17:09:40,238 basehttp 11 123632676226752 "GET /static/fonts/inter/inter.css HTTP/1.1" 200 2595
+INFO 2025-07-09 17:09:40,250 basehttp 11 123632694060736 "GET /static/icons/phosphor/styles.min.css HTTP/1.1" 200 42909
+INFO 2025-07-09 17:09:40,256 basehttp 11 123632676226752 "GET /static/js/vendor/visualization/d3/d3_tooltip.js HTTP/1.1" 200 8383
+WARNING 2025-07-09 17:09:40,261 basehttp 11 123632659441344 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+INFO 2025-07-09 17:09:40,266 basehttp 11 123632684619456 "GET /static/js/bootstrap/bootstrap.bundle.min.js HTTP/1.1" 200 80496
+INFO 2025-07-09 17:09:40,275 basehttp 11 123632694060736 "GET /static/js/app.js HTTP/1.1" 200 23493
+INFO 2025-07-09 17:09:40,275 basehttp 11 123632667834048 "GET /static/js/vendor/visualization/d3/d3.min.js HTTP/1.1" 200 151725
+WARNING 2025-07-09 17:09:40,286 basehttp 11 123632676226752 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 17:09:40,295 basehttp 11 123632659441344 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 17:09:40,321 basehttp 11 123632659441344 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 17:09:40,338 basehttp 11 123632694060736 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 17:09:40,349 basehttp 11 123632302941888 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:09:40,355 basehttp 11 123632684619456 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:09:40,366 basehttp 11 123632659441344 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 17:09:40,374 basehttp 11 123632694060736 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 17:09:40,379 basehttp 11 123632302941888 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 17:09:40,385 basehttp 11 123632684619456 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+INFO 2025-07-09 17:09:40,386 basehttp 11 123632667834048 "GET /static/images/logo_icon.svg HTTP/1.1" 200 13272
+INFO 2025-07-09 17:09:40,396 basehttp 11 123632667834048 "GET /static/images/demo/logos/1.svg HTTP/1.1" 200 1993
+WARNING 2025-07-09 17:09:40,401 basehttp 11 123632659441344 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 17:09:40,401 basehttp 11 123632694060736 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-09 17:09:40,405 basehttp 11 123632311334592 "GET /static/css/all.min.css HTTP/1.1" 200 721580
+INFO 2025-07-09 17:09:40,409 basehttp 11 123632667834048 "GET /static/images/demo/logos/2.svg HTTP/1.1" 200 1760
+INFO 2025-07-09 17:09:40,409 basehttp 11 123632694060736 "GET /static/images/demo/logos/3.svg HTTP/1.1" 200 1690
+INFO 2025-07-09 17:09:40,419 basehttp 11 123632694060736 "GET /static/images/demo/logos/4.svg HTTP/1.1" 200 2097
+INFO 2025-07-09 17:09:40,432 basehttp 11 123632694060736 "GET /static/images/demo/users/face10.jpg HTTP/1.1" 200 54483
+INFO 2025-07-09 17:09:40,438 basehttp 11 123632694060736 "GET /static/images/demo/users/face3.jpg HTTP/1.1" 200 80247
+INFO 2025-07-09 17:09:40,444 basehttp 11 123632311334592 "GET /static/images/demo/users/face24.jpg HTTP/1.1" 200 51103
+INFO 2025-07-09 17:09:40,450 basehttp 11 123632694060736 "GET /static/images/demo/users/face25.jpg HTTP/1.1" 200 53765
+INFO 2025-07-09 17:09:40,450 basehttp 11 123632311334592 "GET /static/images/demo/users/face4.jpg HTTP/1.1" 200 79195
+INFO 2025-07-09 17:09:40,463 basehttp 11 123632311334592 "GET /static/images/brands/adobe.svg HTTP/1.1" 200 601
+INFO 2025-07-09 17:09:40,467 basehttp 11 123632694060736 "GET /static/images/brands/holiday-inn.svg HTTP/1.1" 200 3240
+INFO 2025-07-09 17:09:40,471 basehttp 11 123632659441344 "GET /static/images/demo/users/face11.jpg HTTP/1.1" 200 61159
+INFO 2025-07-09 17:09:40,471 basehttp 11 123632684619456 "GET /static/images/demo/users/face1.jpg HTTP/1.1" 200 54766
+INFO 2025-07-09 17:09:40,471 basehttp 11 123632667834048 "GET /static/images/brands/ing.svg HTTP/1.1" 200 41661
+INFO 2025-07-09 17:09:40,483 basehttp 11 123632659441344 "GET /static/images/icons/pdf.svg HTTP/1.1" 200 2018
+WARNING 2025-07-09 17:09:40,484 basehttp 11 123632684619456 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 17:09:40,486 basehttp 11 123632302941888 "GET /static/images/demo/users/face12.jpg HTTP/1.1" 200 53071
+INFO 2025-07-09 17:09:40,486 basehttp 11 123632694060736 "GET /static/images/demo/users/face13.jpg HTTP/1.1" 200 64652
+INFO 2025-07-09 17:09:40,520 basehttp 11 123632667834048 "GET /static/fonts/inter/Inter-Medium.woff2?v=3.18 HTTP/1.1" 200 105616
+INFO 2025-07-09 17:09:40,520 basehttp 11 123632694060736 "GET /static/fonts/inter/Inter-SemiBold.woff2?v=3.18 HTTP/1.1" 200 105980
+INFO 2025-07-09 17:09:40,522 basehttp 11 123632302941888 "GET /static/fonts/inter/Inter-Regular.woff2?v=3.18 HTTP/1.1" 200 98844
+INFO 2025-07-09 17:09:40,529 basehttp 11 123632311334592 "GET /static/fonts/inter/Inter-Bold.woff2?v=3.18 HTTP/1.1" 200 105912
+INFO 2025-07-09 17:09:40,529 basehttp 11 123632659441344 "GET /static/icons/phosphor/fonts/Phosphor.ttf?9jjo3j HTTP/1.1" 200 302684
+INFO 2025-07-09 17:11:14,355 autoreload 11 123632776440704 /app/apps/core/views.py changed, reloading.
+INFO 2025-07-09 17:11:14,704 autoreload 75 135538108550016 Watching for file changes with StatReloader
+INFO 2025-07-09 17:11:15,074 basehttp 75 135538025686720 "GET / HTTP/1.1" 200 36400
+WARNING 2025-07-09 17:11:15,150 basehttp 75 135537992115904 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:11:15,151 basehttp 75 135538000508608 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 17:11:15,154 basehttp 75 135538008901312 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 17:11:15,156 basehttp 75 135538017294016 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 17:11:15,160 basehttp 75 135538025686720 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 17:11:15,180 basehttp 75 135537992115904 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:11:15,186 basehttp 75 135538008901312 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 17:11:15,194 basehttp 75 135538025686720 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 17:11:15,204 basehttp 75 135538000508608 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 17:11:15,232 basehttp 75 135538017294016 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 17:11:15,232 basehttp 75 135537992115904 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 17:11:15,257 basehttp 75 135538008901312 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 17:11:15,258 basehttp 75 135538025686720 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 17:11:15,338 basehttp 75 135538025686720 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 17:11:22,174 autoreload 75 135538108550016 /app/apps/core/views.py changed, reloading.
+INFO 2025-07-09 17:11:22,519 autoreload 91 137824948403072 Watching for file changes with StatReloader
+INFO 2025-07-09 17:11:34,999 basehttp 91 137824865085120 "GET / HTTP/1.1" 200 64660
+WARNING 2025-07-09 17:11:35,068 basehttp 91 137824848299712 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-09 17:11:35,073 basehttp 91 137824865085120 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-09 17:11:35,074 basehttp 91 137824485500608 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:11:35,080 basehttp 91 137824856692416 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-09 17:11:35,080 basehttp 91 137824839907008 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-09 17:11:35,081 basehttp 91 137824493893312 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-09 17:11:35,111 basehttp 91 137824848299712 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-09 17:11:35,116 basehttp 91 137824856692416 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 17:11:35,123 basehttp 91 137824865085120 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 17:11:35,133 basehttp 91 137824493893312 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-09 17:11:35,133 basehttp 91 137824839907008 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-09 17:11:35,162 basehttp 91 137824485500608 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-09 17:11:35,179 basehttp 91 137824856692416 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+WARNING 2025-07-09 17:11:35,184 basehttp 91 137824865085120 "GET /static/js/bootstrap/bootstrap.bundle.min.js.map HTTP/1.1" 404 1984
+INFO 2025-07-09 18:54:55,675 autoreload 91 137824948403072 /app/apps/workflows/models.py changed, reloading.
+INFO 2025-07-09 18:54:56,087 autoreload 107 137807559248768 Watching for file changes with StatReloader
+INFO 2025-07-09 18:59:56,519 autoreload 107 137807559248768 /app/apps/workflows/models.py changed, reloading.
+INFO 2025-07-09 18:59:56,925 autoreload 109 125503108803456 Watching for file changes with StatReloader
+INFO 2025-07-10 03:33:22,400 autoreload 7 133648066546560 Watching for file changes with StatReloader
+INFO 2025-07-10 03:34:14,435 autoreload 7 124830348151680 Watching for file changes with StatReloader
+INFO 2025-07-10 03:35:45,600 autoreload 7 124830348151680 /app/apps/workflows/admin.py changed, reloading.
+INFO 2025-07-10 03:35:45,930 autoreload 15 124120746441600 Watching for file changes with StatReloader
+INFO 2025-07-10 03:36:18,526 basehttp 15 124120595429056 "GET / HTTP/1.1" 200 64660
+INFO 2025-07-10 03:36:18,584 basehttp 15 124120595429056 "GET /static/fonts/inter/inter.css HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,589 basehttp 15 124120587036352 "GET /static/icons/phosphor/styles.min.css HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,590 basehttp 15 124120578643648 "GET /static/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,592 basehttp 15 124120552416960 "GET /static/js/bootstrap/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,592 basehttp 15 124120570250944 "GET /static/css/joint-plus.css HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,636 basehttp 15 124120587036352 "GET /static/js/vendor/visualization/d3/d3.min.js HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,636 basehttp 15 124120578643648 "GET /static/js/vendor/visualization/d3/d3_tooltip.js HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,637 basehttp 15 124120595429056 "GET /static/js/app.js HTTP/1.1" 304 0
+WARNING 2025-07-10 03:36:18,732 basehttp 15 124120595429056 "GET /static/demo/charts/pages/dashboard/areas.js HTTP/1.1" 404 1972
+WARNING 2025-07-10 03:36:18,734 basehttp 15 124120578643648 "GET /static/demo/charts/pages/dashboard/lines.js HTTP/1.1" 404 1972
+WARNING 2025-07-10 03:36:18,737 basehttp 15 124120561858240 "GET /static/demo/demo_configurator.js HTTP/1.1" 404 1939
+WARNING 2025-07-10 03:36:18,738 basehttp 15 124120552416960 "GET /static/demo/pages/dashboard.js HTTP/1.1" 404 1933
+WARNING 2025-07-10 03:36:18,739 basehttp 15 124120587036352 "GET /static/demo/charts/pages/dashboard/sparklines.js HTTP/1.1" 404 1987
+WARNING 2025-07-10 03:36:18,739 basehttp 15 124120570250944 "GET /static/demo/charts/pages/dashboard/streamgraph.js HTTP/1.1" 404 1990
+WARNING 2025-07-10 03:36:18,759 basehttp 15 124120561858240 "GET /static/demo/charts/pages/dashboard/bars.js HTTP/1.1" 404 1969
+WARNING 2025-07-10 03:36:18,759 basehttp 15 124120578643648 "GET /static/demo/charts/pages/dashboard/donuts.js HTTP/1.1" 404 1975
+WARNING 2025-07-10 03:36:18,766 basehttp 15 124120595429056 "GET /static/demo/charts/pages/dashboard/progress.js HTTP/1.1" 404 1981
+INFO 2025-07-10 03:36:18,770 basehttp 15 124120561858240 "GET /static/images/logo_icon.svg HTTP/1.1" 304 0
+WARNING 2025-07-10 03:36:18,773 basehttp 15 124120570250944 "GET /static/demo/charts/pages/dashboard/pies.js HTTP/1.1" 404 1969
+WARNING 2025-07-10 03:36:18,774 basehttp 15 124120587036352 "GET /static/demo/charts/pages/dashboard/heatmaps.js HTTP/1.1" 404 1981
+WARNING 2025-07-10 03:36:18,780 basehttp 15 124120552416960 "GET /static/demo/charts/pages/dashboard/bullets.js HTTP/1.1" 404 1978
+WARNING 2025-07-10 03:36:18,780 basehttp 15 124120578643648 "GET /static/mages/logo_text_light.svg HTTP/1.1" 404 1939
+INFO 2025-07-10 03:36:18,785 basehttp 15 124120578643648 "GET /static/images/demo/logos/1.svg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,795 basehttp 15 124120552416960 "GET /static/images/demo/logos/2.svg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,796 basehttp 15 124120587036352 "GET /static/images/demo/logos/3.svg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,797 basehttp 15 124120570250944 "GET /static/images/demo/logos/4.svg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,798 basehttp 15 124120595429056 "GET /static/images/demo/users/face10.jpg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,824 basehttp 15 124120561858240 "GET /static/images/demo/users/face3.jpg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,838 basehttp 15 124120578643648 "GET /static/images/demo/users/face24.jpg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,856 basehttp 15 124120552416960 "GET /static/fonts/inter/Inter-SemiBold.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,857 basehttp 15 124120595429056 "GET /static/icons/phosphor/fonts/Phosphor.ttf?9jjo3j HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,857 basehttp 15 124120570250944 "GET /static/fonts/inter/Inter-Regular.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,859 basehttp 15 124120587036352 "GET /static/fonts/inter/Inter-Medium.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,869 basehttp 15 124120561858240 "GET /static/fonts/inter/Inter-Bold.woff2?v=3.18 HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,884 basehttp 15 124120578643648 "GET /static/images/demo/users/face11.jpg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,917 basehttp 15 124120552416960 "GET /static/images/demo/users/face1.jpg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,919 basehttp 15 124120587036352 "GET /static/images/demo/users/face4.jpg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,920 basehttp 15 124120561858240 "GET /static/images/demo/users/face25.jpg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,920 basehttp 15 124120570250944 "GET /static/images/demo/users/face13.jpg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,921 basehttp 15 124120595429056 "GET /static/images/icons/pdf.svg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,937 basehttp 15 124120578643648 "GET /static/images/demo/users/face12.jpg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,967 basehttp 15 124120552416960 "GET /static/images/brands/adobe.svg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,989 basehttp 15 124120561858240 "GET /static/images/brands/ing.svg HTTP/1.1" 304 0
+INFO 2025-07-10 03:36:18,989 basehttp 15 124120587036352 "GET /static/images/brands/holiday-inn.svg HTTP/1.1" 304 0
+WARNING 2025-07-10 03:36:19,093 log 15 124120587036352 Not Found: /favicon.ico
+WARNING 2025-07-10 03:36:19,094 basehttp 15 124120587036352 "GET /favicon.ico HTTP/1.1" 404 4059
+WARNING 2025-07-10 03:36:31,760 log 15 124120587036352 Not Found: /editor
+WARNING 2025-07-10 03:36:31,760 basehttp 15 124120587036352 "GET /editor HTTP/1.1" 404 4044
+INFO 2025-07-10 03:37:35,499 autoreload 15 124120746441600 /app/apps/workflows/urls.py changed, reloading.
+INFO 2025-07-10 03:37:35,889 autoreload 54 125044676901760 Watching for file changes with StatReloader
+INFO 2025-07-10 03:38:01,488 autoreload 6 138390633716608 Watching for file changes with StatReloader
+WARNING 2025-07-10 03:38:05,165 log 6 138390550865600 Not Found: /editor
+WARNING 2025-07-10 03:38:05,166 basehttp 6 138390550865600 "GET /editor HTTP/1.1" 404 4044
+WARNING 2025-07-10 03:39:26,825 log 6 138390550865600 Not Found: /editor
+WARNING 2025-07-10 03:39:26,826 basehttp 6 138390550865600 "GET /editor HTTP/1.1" 404 4044
+INFO 2025-07-10 03:39:53,444 basehttp 6 138390550865600 "GET /workflows HTTP/1.1" 301 0
+WARNING 2025-07-10 03:39:53,534 base 6 138390550865600 Session data corrupted
+INFO 2025-07-10 03:39:53,545 basehttp 6 138390550865600 "GET /workflows/ HTTP/1.1" 302 0
+WARNING 2025-07-10 03:39:53,600 log 6 138390550865600 Not Found: /accounts/login/
+WARNING 2025-07-10 03:39:53,600 basehttp 6 138390550865600 "GET /accounts/login/?next=/workflows/ HTTP/1.1" 404 4088
+WARNING 2025-07-10 03:40:39,398 base 6 138390550865600 Session data corrupted
+INFO 2025-07-10 03:40:39,398 basehttp 6 138390550865600 "GET /workflows/ HTTP/1.1" 302 0
+WARNING 2025-07-10 03:40:39,456 log 6 138390550865600 Not Found: /accounts/login/
+WARNING 2025-07-10 03:40:39,456 basehttp 6 138390550865600 "GET /accounts/login/?next=/workflows/ HTTP/1.1" 404 4088
+INFO 2025-07-10 03:40:51,287 basehttp 6 138390550865600 "GET /workflows/editor HTTP/1.1" 301 0
+WARNING 2025-07-10 03:40:51,300 base 6 138390550865600 Session data corrupted
+INFO 2025-07-10 03:40:51,300 basehttp 6 138390550865600 "GET /workflows/editor/ HTTP/1.1" 302 0
+WARNING 2025-07-10 03:40:51,358 log 6 138390550865600 Not Found: /accounts/login/
+WARNING 2025-07-10 03:40:51,358 basehttp 6 138390550865600 "GET /accounts/login/?next=/workflows/editor/ HTTP/1.1" 404 4095
+INFO 2025-07-10 03:41:12,659 autoreload 6 138390633716608 /app/apps/workflows/views.py changed, reloading.
+INFO 2025-07-10 03:41:13,018 autoreload 11 126355446000512 Watching for file changes with StatReloader
+WARNING 2025-07-10 03:41:13,767 log 11 126355363587776 Not Found: /accounts/login/
+WARNING 2025-07-10 03:41:13,767 basehttp 11 126355363587776 "GET /accounts/login/?next=/workflows/editor/ HTTP/1.1" 404 4095
+INFO 2025-07-10 03:41:24,049 basehttp 11 126355363587776 "GET /workflows/editor/ HTTP/1.1" 200 6891
+INFO 2025-07-10 03:41:24,086 basehttp 11 126355363587776 "GET /static/js/workflow/workflow-editor.js HTTP/1.1" 200 18679
+INFO 2025-07-10 03:44:14,566 basehttp 11 126355363587776 "GET /workflows/editor/ HTTP/1.1" 200 8136
+INFO 2025-07-10 03:44:14,597 basehttp 11 126355363587776 "GET /static/js/workflow/workflow-editor.js HTTP/1.1" 304 0
+INFO 2025-07-10 03:44:23,143 autoreload 7 135033783413632 Watching for file changes with StatReloader
+INFO 2025-07-10 03:44:24,090 basehttp 7 135033700476608 "GET /workflows/editor/ HTTP/1.1" 200 8136
+INFO 2025-07-10 03:45:18,943 basehttp 7 135033700476608 "GET /workflows/editor/ HTTP/1.1" 200 8136
+INFO 2025-07-10 03:45:21,667 basehttp 7 135033691035328 "GET /workflows/editor/ HTTP/1.1" 200 8136
+INFO 2025-07-10 03:45:21,710 basehttp 7 135033691035328 "GET /static/js/workflow/workflow-editor.js HTTP/1.1" 200 18679
+INFO 2025-07-10 03:48:37,741 autoreload 7 135033783413632 /app/apps/workflows/views.py changed, reloading.
+INFO 2025-07-10 03:48:38,067 autoreload 11 139049663007616 Watching for file changes with StatReloader
+INFO 2025-07-10 03:49:13,738 basehttp 11 139049579833024 "GET /workflows/editor/ HTTP/1.1" 200 8136
+INFO 2025-07-10 03:49:13,775 basehttp 11 139049579833024 "GET /static/js/workflow/workflow-editor.js HTTP/1.1" 304 0
+WARNING 2025-07-10 03:49:24,622 base 11 139049579833024 Session data corrupted
+INFO 2025-07-10 03:49:24,633 basehttp 11 139049579833024 "GET /workflows/dashboard/ HTTP/1.1" 302 0
+WARNING 2025-07-10 03:49:24,698 log 11 139049579833024 Not Found: /accounts/login/
+WARNING 2025-07-10 03:49:24,698 basehttp 11 139049579833024 "GET /accounts/login/?next=/workflows/dashboard/ HTTP/1.1" 404 4098
+INFO 2025-07-10 03:49:57,017 autoreload 11 139049663007616 /app/apps/workflows/urls.py changed, reloading.
+INFO 2025-07-10 03:49:57,342 autoreload 14 137266757458816 Watching for file changes with StatReloader
+INFO 2025-07-10 03:50:46,499 autoreload 14 137266757458816 /app/apps/workflows/views.py changed, reloading.
+INFO 2025-07-10 03:50:46,789 autoreload 16 127741604400000 Watching for file changes with StatReloader
+INFO 2025-07-10 10:52:42,420 autoreload 16 127741604400000 /app/apps/workflows/views.py changed, reloading.
+INFO 2025-07-10 10:52:42,737 autoreload 18 135096519707520 Watching for file changes with StatReloader
+INFO 2025-07-10 10:52:50,196 autoreload 7 138687778462592 Watching for file changes with StatReloader
+WARNING 2025-07-10 10:53:15,112 log 7 138687694235328 Not Found: /workflow-builder/simple
+WARNING 2025-07-10 10:53:15,112 basehttp 7 138687694235328 "GET /workflow-builder/simple HTTP/1.1" 404 4095
+INFO 2025-07-10 10:53:44,171 basehttp 7 138687694235328 "GET /workflows/simple HTTP/1.1" 301 0
+WARNING 2025-07-10 10:53:44,254 base 7 138687694235328 Session data corrupted
+ERROR 2025-07-10 10:53:44,282 log 7 138687694235328 Internal Server Error: /workflows/simple/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/workflows/views.py", line 337, in workflow_editor_simple
+    return render(request, 'workflow/editor_simple.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: workflow/editor_simple.html
+ERROR 2025-07-10 10:53:44,283 basehttp 7 138687694235328 "GET /workflows/simple/ HTTP/1.1" 500 78801
+INFO 2025-07-10 10:55:21,221 basehttp 7 138687694235328 "GET /workflows/simple/ HTTP/1.1" 200 15266
+INFO 2025-07-10 10:57:22,212 autoreload 7 138687778462592 /app/apps/workflows/views.py changed, reloading.
+INFO 2025-07-10 10:57:22,611 autoreload 11 125117856869248 Watching for file changes with StatReloader
+INFO 2025-07-10 10:57:30,082 autoreload 11 125117856869248 /app/apps/workflows/urls.py changed, reloading.
+INFO 2025-07-10 10:57:30,414 autoreload 13 127841451064192 Watching for file changes with StatReloader
+INFO 2025-07-10 10:57:53,790 basehttp 13 127841367746240 "GET /workflows/reactflow/ HTTP/1.1" 200 22491
+INFO 2025-07-10 13:37:41,989 autoreload 13 127841451064192 /app/apps/workflows/models.py changed, reloading.
+INFO 2025-07-10 13:37:42,327 autoreload 16 135841381170048 Watching for file changes with StatReloader
+INFO 2025-07-11 07:47:05,643 autoreload 16 135841381170048 /app/apps/workflows/urls.py changed, reloading.
+INFO 2025-07-11 07:47:05,953 autoreload 18 127829651323776 Watching for file changes with StatReloader
+INFO 2025-07-11 07:49:06,989 autoreload 18 127829651323776 /app/apps/workflows/models.py changed, reloading.
+INFO 2025-07-11 07:49:07,282 autoreload 20 128270904482688 Watching for file changes with StatReloader
+INFO 2025-07-11 09:21:02,953 autoreload 7 132450120776576 Watching for file changes with StatReloader
+INFO 2025-07-11 09:22:00,419 autoreload 7 132450120776576 /app/apps/workflows/models.py changed, reloading.
+INFO 2025-07-11 09:22:00,703 autoreload 9 136684368350080 Watching for file changes with StatReloader
+INFO 2025-07-11 09:24:21,580 autoreload 9 136684368350080 /app/apps/workflows/models.py changed, reloading.
+INFO 2025-07-11 09:24:21,933 autoreload 11 132272867072896 Watching for file changes with StatReloader
+INFO 2025-07-11 09:27:29,684 autoreload 11 132272867072896 /app/apps/workflows/models.py changed, reloading.
+INFO 2025-07-11 09:27:30,066 autoreload 13 126419414858624 Watching for file changes with StatReloader
+INFO 2025-07-11 09:28:42,947 autoreload 13 126419414858624 /app/apps/workflows/admin.py changed, reloading.
+INFO 2025-07-11 09:28:43,335 autoreload 15 139078781623168 Watching for file changes with StatReloader
+INFO 2025-07-11 09:33:33,329 autoreload 7 129956962909056 Watching for file changes with StatReloader

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Network Automation Platform{% endblock %}</title>
+    
+    <!-- CSS Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/react-flow-renderer/11.11.0/dist/style.css" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'workflows/css/workflow-builder.css' %}" rel="stylesheet">
+    
+    <!-- JavaScript Dependencies -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-flow-renderer/11.11.0/dist/index.umd.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-semibold text-gray-900">
+                        Network Automation Platform
+                    </h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm text-gray-600">{{ user.username }}</span>
+                    <a href="{% url 'workflows:workflow_list' %}" class="text-blue-600 hover:text-blue-800">
+                        My Workflows
+                    </a>
+                    <a href="{% url 'admin:logout' %}" class="text-red-600 hover:text-red-800">
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- CSRF Token for AJAX -->
+    <script>
+        window.CSRF_TOKEN = '{{ csrf_token }}';
+        window.USER_ID = {{ user.id }};
+    </script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

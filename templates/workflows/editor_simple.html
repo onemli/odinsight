@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odinsight Workflow Editor</title>
+    {% load static %}
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Bootstrap CSS (mevcut sisteminizle uyumlu olması için) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        }
+        .workflow-container {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+        .react-flow__node {
+            cursor: pointer;
+        }
+        .react-flow__edge {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    {% csrf_token %}
+    
+    <!-- Ana Container -->
+    <div id="workflow-app" class="workflow-container">
+        <!-- Yükleniyor mesajı -->
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <span class="ms-3">Workflow Editor Loading...</span>
+        </div>
+    </div>
+
+    <!-- JavaScript Kütüphaneleri -->
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- React Flow - ESM version -->
+    <script type="module">
+        import ReactFlow, { 
+            MiniMap, 
+            Controls, 
+            Background, 
+            useNodesState, 
+            useEdgesState, 
+            addEdge, 
+            Panel, 
+            MarkerType, 
+            useReactFlow,
+            ReactFlowProvider 
+        } from 'https://cdn.skypack.dev/@reactflow/core@11.11.0';
+        
+        // Global olarak erişilebilir hale getir
+        window.ReactFlowLib = {
+            ReactFlow,
+            MiniMap,
+            Controls,
+            Background,
+            useNodesState,
+            useEdgesState,
+            addEdge,
+            Panel,
+            MarkerType,
+            useReactFlow,
+            ReactFlowProvider
+        };
+        
+        console.log('ReactFlow loaded via ESM');
+        
+        // React uygulamasını başlat
+        loadWorkflowApp();
+    </script>
+    
+    <!-- React olmayan tarayıcılar için fallback -->
+    <script nomodule>
+        console.warn('ESM not supported, loading UMD version...');
+        
+        // UMD version yükle
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/reactflow@11.10.4/dist/umd/index.js';
+        script.onload = function() {
+            window.ReactFlowLib = window.ReactFlow;
+            console.log('ReactFlow loaded via UMD');
+            loadWorkflowApp();
+        };
+        document.head.appendChild(script);
+    </script>
+    
+    <!-- Basitleştirilmiş Workflow Editor -->
+    <script>
+        const { useState, useCallback, useRef } = React;
+        
+        // Node kategorileri
+        const nodeCategories = {
+            'Automation': {
+                color: 'bg-blue-500',
+                nodes: [
+                    { type: 'ansible-playbook', label: 'Ansible Playbook' },
+                    { type: 'cli-parser', label: 'CLI Parser' },
+                    { type: 'netconf', label: 'NETCONF' },
+                    { type: 'restconf', label: 'RESTCONF' },
+                ]
+            },
+            'Logic': {
+                color: 'bg-green-500',
+                nodes: [
+                    { type: 'condition', label: 'Condition' },
+                    { type: 'loop', label: 'Loop' },
+                    { type: 'delay', label: 'Delay' },
+                ]
+            }
+        };
+        
+        // Basit Custom Node
+        const CustomNode = ({ data, selected }) => {
+            const [isEditing, setIsEditing] = useState(false);
+            
+            return React.createElement('div', {
+                className: `px-4 py-2 shadow-lg rounded-lg border-2 ${selected ? 'border-blue-400' : 'border-gray-200'} bg-white min-w-[150px]`,
+                style: { minWidth: '150px' }
+            }, [
+                React.createElement('div', {
+                    key: 'header',
+                    className: 'flex items-center justify-between mb-2'
+                }, [
+                    React.createElement('span', {
+                        key: 'label',
+                        className: 'text-sm font-medium'
+                    }, data.label),
+                    React.createElement('button', {
+                        key: 'edit',
+                        onClick: () => setIsEditing(!isEditing),
+                        className: 'text-xs px-2 py-1 bg-gray-100 rounded'
+                    }, 'Edit')
+                ]),
+                
+                isEditing && React.createElement('div', {
+                    key: 'editor',
+                    className: 'mt-2 p-2 bg-gray-50 rounded'
+                }, [
+                    React.createElement('textarea', {
+                        key: 'config',
+                        placeholder: 'YAML Configuration',
+                        className: 'w-full p-1 text-xs border rounded h-16',
+                        defaultValue: data.config || ''
+                    }),
+                    React.createElement('button', {
+                        key: 'save',
+                        onClick: () => setIsEditing(false),
+                        className: 'mt-1 px-2 py-1 bg-blue-500 text-white text-xs rounded'
+                    }, 'Save')
+                ]),
+                
+                React.createElement('div', {
+                    key: 'footer',
+                    className: 'text-xs text-gray-500 mt-2'
+                }, data.type)
+            ]);
+        };
+        
+        // Node types
+        const nodeTypes = {
+            'ansible-playbook': CustomNode,
+            'cli-parser': CustomNode,
+            'netconf': CustomNode,
+            'restconf': CustomNode,
+            'condition': CustomNode,
+            'loop': CustomNode,
+            'delay': CustomNode
+        };
+        
+        // Sidebar Component
+        const Sidebar = ({ onAddNode }) => {
+            return React.createElement('div', {
+                className: 'w-64 bg-gray-100 border-r border-gray-200 flex flex-col'
+            }, [
+                React.createElement('div', {
+                    key: 'header',
+                    className: 'p-4 border-b border-gray-200'
+                }, [
+                    React.createElement('h3', {
+                        key: 'title',
+                        className: 'text-lg font-semibold'
+                    }, 'Workflow Blocks')
+                ]),
+                
+                React.createElement('div', {
+                    key: 'content',
+                    className: 'flex-1 overflow-y-auto p-2'
+                }, Object.entries(nodeCategories).map(([categoryName, category]) =>
+                    React.createElement('div', {
+                        key: categoryName,
+                        className: 'mb-4'
+                    }, [
+                        React.createElement('h4', {
+                            key: 'category-title',
+                            className: 'text-sm font-medium mb-2 text-gray-700'
+                        }, categoryName),
+                        
+                        React.createElement('div', {
+                            key: 'nodes',
+                            className: 'space-y-1'
+                        }, category.nodes.map((node) =>
+                            React.createElement('button', {
+                                key: node.type,
+                                onClick: () => onAddNode(node.type, node.label),
+                                className: 'w-full text-left p-2 text-sm bg-white border rounded hover:bg-gray-50'
+                            }, node.label)
+                        ))
+                    ])
+                ))
+            ]);
+        };
+        
+        // Ana Workflow Component
+        const WorkflowEditor = () => {
+            if (!window.ReactFlowLib) {
+                return React.createElement('div', {
+                    className: 'flex items-center justify-center h-full'
+                }, 'Loading ReactFlow...');
+            }
+            
+            const {
+                ReactFlow, MiniMap, Controls, Background, 
+                useNodesState, useEdgesState, addEdge, 
+                Panel, MarkerType, useReactFlow
+            } = window.ReactFlowLib;
+            
+            const [nodes, setNodes, onNodesChange] = useNodesState([]);
+            const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+            const [workflowName, setWorkflowName] = useState('Untitled Workflow');
+            
+            const nodeId = useRef(0);
+            const getNodeId = () => `node_${nodeId.current++}`;
+            
+            const onConnect = useCallback((params) => {
+                const newEdge = {
+                    ...params,
+                    markerEnd: { type: MarkerType.ArrowClosed }
+                };
+                setEdges((eds) => addEdge(newEdge, eds));
+            }, [setEdges]);
+            
+            const onAddNode = useCallback((type, label) => {
+                const newNode = {
+                    id: getNodeId(),
+                    type,
+                    position: { x: Math.random() * 400 + 100, y: Math.random() * 300 + 100 },
+                    data: { label, type, config: '' }
+                };
+                setNodes((nds) => nds.concat(newNode));
+            }, [setNodes]);
+            
+            const saveWorkflow = async () => {
+                const workflowData = {
+                    name: workflowName,
+                    nodes,
+                    edges,
+                    timestamp: new Date().toISOString()
+                };
+                
+                try {
+                    const response = await fetch('/workflow/api/workflows/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                        },
+                        body: JSON.stringify(workflowData)
+                    });
+                    
+                    if (response.ok) {
+                        alert('Workflow saved successfully!');
+                    } else {
+                        alert('Error saving workflow');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Error saving workflow');
+                }
+            };
+            
+            return React.createElement('div', {
+                className: 'flex h-screen bg-gray-50'
+            }, [
+                React.createElement(Sidebar, {
+                    key: 'sidebar',
+                    onAddNode
+                }),
+                
+                React.createElement('div', {
+                    key: 'main',
+                    className: 'flex-1 flex flex-col'
+                }, [
+                    // Header
+                    React.createElement('div', {
+                        key: 'header',
+                        className: 'bg-white border-b border-gray-200 p-4'
+                    }, [
+                        React.createElement('div', {
+                            key: 'header-content',
+                            className: 'flex items-center justify-between'
+                        }, [
+                            React.createElement('input', {
+                                key: 'name-input',
+                                type: 'text',
+                                value: workflowName,
+                                onChange: (e) => setWorkflowName(e.target.value),
+                                className: 'px-3 py-1 border border-gray-300 rounded font-medium'
+                            }),
+                            
+                            React.createElement('button', {
+                                key: 'save-btn',
+                                onClick: saveWorkflow,
+                                className: 'px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600'
+                            }, 'Save Workflow')
+                        ])
+                    ]),
+                    
+                    // Canvas
+                    React.createElement('div', {
+                        key: 'canvas',
+                        className: 'flex-1'
+                    }, [
+                        React.createElement(ReactFlow, {
+                            key: 'reactflow',
+                            nodes,
+                            edges,
+                            onNodesChange,
+                            onEdgesChange,
+                            onConnect,
+                            nodeTypes,
+                            fitView: true
+                        }, [
+                            React.createElement(Background, { key: 'bg' }),
+                            React.createElement(Controls, { key: 'controls' }),
+                            React.createElement(MiniMap, { key: 'minimap' }),
+                            React.createElement(Panel, {
+                                key: 'panel',
+                                position: 'top-right'
+                            }, `Nodes: ${nodes.length} | Edges: ${edges.length}`)
+                        ])
+                    ])
+                ])
+            ]);
+        };
+        
+        // Provider wrapper
+        const WorkflowApp = () => {
+            if (!window.ReactFlowLib || !window.ReactFlowLib.ReactFlowProvider) {
+                return React.createElement('div', {
+                    className: 'flex items-center justify-center h-full text-lg'
+                }, 'Loading ReactFlow Provider...');
+            }
+            
+            return React.createElement(window.ReactFlowLib.ReactFlowProvider, {}, [
+                React.createElement(WorkflowEditor, { key: 'editor' })
+            ]);
+        };
+        
+        // Global olarak erişilebilir hale getir
+        window.WorkflowApp = WorkflowApp;
+        
+        // Uygulama yükleme fonksiyonu
+        window.loadWorkflowApp = function() {
+            const container = document.getElementById('workflow-app');
+            if (container && window.ReactFlowLib) {
+                const root = ReactDOM.createRoot(container);
+                root.render(React.createElement(window.WorkflowApp));
+                console.log('Odinsight Workflow Editor loaded successfully!');
+            } else {
+                console.error('Container or ReactFlowLib not found');
+            }
+        };
+    </script>
+</body>
+</html>

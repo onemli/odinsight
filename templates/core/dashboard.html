@@ -1,6 +1,7 @@
+{% extends "base.html" %}
 {% load static %}
 
-{% block title %}Network Automation Dashboard - Odinsight{% endblock %}
+{% block title %}Network Automation Dashboardasdasdd - Odinsight{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -449,6 +450,9 @@ class NetworkWorkflowBuilder {
         this.paper = null;
         this.graph = null;
         this.selectedElement = null;
+        this.canvasElements = [];
+        this.nodeCounter = 0;
+        this.connectionCounter = 0;
         this.init();
     }
 
@@ -457,18 +461,24 @@ class NetworkWorkflowBuilder {
         this.setupCanvas();
         this.setupEventListeners();
         this.setupStencil();
-        this.loadSampleWorkflow();
+        this.setupDragAndDrop();
+        
+        // Show initial notification
+        setTimeout(() => {
+            this.showNotification('Workflow Builder Ready!', 'success');
+        }, 500);
     }
 
     setupCanvas() {
-        // For now, we'll create a placeholder canvas
         const canvas = document.getElementById('workflowCanvas');
         canvas.innerHTML = `
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #6c757d;">
-                <i class="ph-diagram-project" style="font-size: 4rem; margin-bottom: 1rem; display: block;"></i>
-                <h5>Workflow Canvas</h5>
-                <p>Drag components from the sidebar to start building your workflow</p>
-                <small>JointJS+ integration coming soon</small>
+            <div id="canvasContent" style="position: relative; width: 100%; height: 100%;">
+                <div id="canvasPlaceholder" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #6c757d;">
+                    <i class="ph-diagram-project" style="font-size: 4rem; margin-bottom: 1rem; display: block;"></i>
+                    <h5>Workflow Canvas</h5>
+                    <p>Drag components from the sidebar to start building your workflow</p>
+                    <small>Click "Components" to open the toolbox</small>
+                </div>
             </div>
         `;
     }
@@ -477,13 +487,17 @@ class NetworkWorkflowBuilder {
         // Toggle stencil sidebar
         document.getElementById('toggleStencil').addEventListener('click', () => {
             const sidebar = document.getElementById('stencilSidebar');
+            const button = document.getElementById('toggleStencil');
             sidebar.classList.toggle('show');
+            button.classList.toggle('active');
         });
 
         // Toggle properties panel
         document.getElementById('toggleProperties').addEventListener('click', () => {
             const panel = document.getElementById('propertiesPanel');
+            const button = document.getElementById('toggleProperties');
             panel.classList.toggle('show');
+            button.classList.toggle('active');
         });
 
         // Workflow actions
@@ -505,90 +519,411 @@ class NetworkWorkflowBuilder {
 
         // Zoom controls
         document.getElementById('zoomIn').addEventListener('click', () => {
-            console.log('Zoom in');
+            this.zoomIn();
         });
 
         document.getElementById('zoomOut').addEventListener('click', () => {
-            console.log('Zoom out');
+            this.zoomOut();
         });
 
         document.getElementById('zoomToFit').addEventListener('click', () => {
-            console.log('Zoom to fit');
+            this.zoomToFit();
         });
 
         // Undo/Redo
         document.getElementById('undoAction').addEventListener('click', () => {
-            console.log('Undo');
+            this.undo();
         });
 
         document.getElementById('redoAction').addEventListener('click', () => {
-            console.log('Redo');
+            this.redo();
+        });
+
+        // Quick action buttons
+        document.querySelectorAll('.card .btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const action = e.target.textContent.trim();
+                this.handleQuickAction(action);
+            });
         });
     }
 
     setupStencil() {
-        // Add drag and drop functionality to stencil items
+        // Add click functionality to stencil items
         const stencilItems = document.querySelectorAll('.stencil-item');
         stencilItems.forEach(item => {
-            item.addEventListener('dragstart', (e) => {
-                e.dataTransfer.setData('text/plain', item.dataset.type);
-                console.log('Dragging:', item.dataset.type);
-            });
-            
             item.addEventListener('click', () => {
-                console.log('Clicked:', item.dataset.type);
-                this.addElementToCanvas(item.dataset.type);
+                const type = item.dataset.type;
+                console.log('Clicked:', type);
+                this.addElementToCanvas(type);
+            });
+
+            // Add hover effects
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'scale(1.05)';
+            });
+
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'scale(1)';
             });
         });
 
         // Make stencil items draggable
         stencilItems.forEach(item => {
             item.draggable = true;
+            item.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', item.dataset.type);
+                console.log('Dragging:', item.dataset.type);
+            });
         });
     }
 
-    addElementToCanvas(type) {
-        console.log(`Adding ${type} to canvas`);
-        // This will be implemented with JointJS+
-        this.showNotification(`Added ${type} to workflow`, 'success');
+    setupDragAndDrop() {
+        const canvas = document.getElementById('workflowCanvas');
+        
+        canvas.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            canvas.style.backgroundColor = '#f0f8ff';
+        });
+
+        canvas.addEventListener('dragleave', () => {
+            canvas.style.backgroundColor = '#f8f9fa';
+        });
+
+        canvas.addEventListener('drop', (e) => {
+            e.preventDefault();
+            canvas.style.backgroundColor = '#f8f9fa';
+            
+            const type = e.dataTransfer.getData('text/plain');
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            this.addElementToCanvas(type, x, y);
+        });
+    }
+
+    addElementToCanvas(type, x = Math.random() * 400 + 100, y = Math.random() * 300 + 100) {
+        console.log(`Adding ${type} to canvas at (${x}, ${y})`);
+        
+        // Remove placeholder if this is the first element
+        if (this.canvasElements.length === 0) {
+            const placeholder = document.getElementById('canvasPlaceholder');
+            if (placeholder) {
+                placeholder.style.display = 'none';
+            }
+        }
+
+        // Create element
+        const element = this.createElement(type, x, y);
+        this.canvasElements.push(element);
+        
+        // Add to canvas
+        const canvasContent = document.getElementById('canvasContent');
+        canvasContent.appendChild(element);
+        
+        this.nodeCounter++;
         this.updateStats();
+        this.showNotification(`Added ${type} to workflow`, 'success');
+    }
+
+    createElement(type, x, y) {
+        const element = document.createElement('div');
+        element.className = 'workflow-element';
+        element.style.cssText = `
+            position: absolute;
+            left: ${x}px;
+            top: ${y}px;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: move;
+            user-select: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+            z-index: 1;
+        `;
+
+        // Get icon and color based on type
+        const config = this.getElementConfig(type);
+        
+        element.innerHTML = `
+            <i class="${config.icon}" style="font-size: 24px; color: ${config.color}; margin-bottom: 4px;"></i>
+            <span style="font-size: 10px; font-weight: 500; color: #666; text-align: center;">${config.label}</span>
+        `;
+
+        // Add hover effects
+        element.addEventListener('mouseenter', () => {
+            element.style.transform = 'scale(1.1)';
+            element.style.boxShadow = '0 4px 16px rgba(0,0,0,0.2)';
+        });
+
+        element.addEventListener('mouseleave', () => {
+            element.style.transform = 'scale(1)';
+            element.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+        });
+
+        // Add click handler
+        element.addEventListener('click', () => {
+            this.selectElement(element, type);
+        });
+
+        // Add drag functionality
+        this.makeDraggable(element);
+
+        return element;
+    }
+
+    getElementConfig(type) {
+        const configs = {
+            // Network Devices
+            server: { icon: 'ph-desktop', color: '#3498db', label: 'Server' },
+            router: { icon: 'ph-router', color: '#e67e22', label: 'Router' },
+            switch: { icon: 'ph-switch', color: '#27ae60', label: 'Switch' },
+            firewall: { icon: 'ph-shield-check', color: '#e74c3c', label: 'Firewall' },
+            cloud: { icon: 'ph-cloud', color: '#9b59b6', label: 'Cloud' },
+            database: { icon: 'ph-database', color: '#34495e', label: 'Database' },
+            
+            // Ansible Tower
+            playbook: { icon: 'ph-file-text', color: '#ee0000', label: 'Playbook' },
+            task: { icon: 'ph-list-checks', color: '#ff6b6b', label: 'Task' },
+            inventory: { icon: 'ph-tree-structure', color: '#ff9f43', label: 'Inventory' },
+            role: { icon: 'ph-user-gear', color: '#feca57', label: 'Role' },
+            
+            // Flow Control
+            start: { icon: 'ph-play-circle', color: '#00d2d3', label: 'Start' },
+            decision: { icon: 'ph-diamond', color: '#ff9ff3', label: 'Decision' },
+            process: { icon: 'ph-rectangle', color: '#54a0ff', label: 'Process' },
+            end: { icon: 'ph-stop-circle', color: '#5f27cd', label: 'End' }
+        };
+
+        return configs[type] || { icon: 'ph-question', color: '#666', label: 'Unknown' };
+    }
+
+    makeDraggable(element) {
+        let isDragging = false;
+        let startX, startY, initialX, initialY;
+
+        element.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX;
+            startY = e.clientY;
+            initialX = parseInt(element.style.left);
+            initialY = parseInt(element.style.top);
+            element.style.zIndex = '10';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            
+            const dx = e.clientX - startX;
+            const dy = e.clientY - startY;
+            
+            element.style.left = (initialX + dx) + 'px';
+            element.style.top = (initialY + dy) + 'px';
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                element.style.zIndex = '1';
+            }
+        });
+    }
+
+    selectElement(element, type) {
+        // Remove previous selection
+        document.querySelectorAll('.workflow-element').forEach(el => {
+            el.style.borderColor = '#3498db';
+        });
+
+        // Highlight selected element
+        element.style.borderColor = '#e74c3c';
+        this.selectedElement = { element, type };
+
+        // Update properties panel
+        this.updatePropertiesPanel(type);
+        
+        // Auto-open properties if closed
+        const panel = document.getElementById('propertiesPanel');
+        if (!panel.classList.contains('show')) {
+            panel.classList.add('show');
+            document.getElementById('toggleProperties').classList.add('active');
+        }
+    }
+
+    updatePropertiesPanel(type) {
+        const config = this.getElementConfig(type);
+        const propertiesForm = document.getElementById('propertiesForm');
+        
+        propertiesForm.innerHTML = `
+            <div class="mb-3">
+                <label class="form-label">Element Type</label>
+                <input type="text" class="form-control" value="${config.label}" readonly>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" value="${config.label}_${this.nodeCounter}" placeholder="Enter name">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <textarea class="form-control" rows="3" placeholder="Enter description"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Configuration</label>
+                <textarea class="form-control" rows="4" placeholder="Enter configuration details"></textarea>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary btn-sm" onclick="workflowBuilder.saveElementProperties()">
+                    <i class="ph-check me-1"></i> Save
+                </button>
+                <button class="btn btn-danger btn-sm" onclick="workflowBuilder.deleteElement()">
+                    <i class="ph-trash me-1"></i> Delete
+                </button>
+            </div>
+        `;
+    }
+
+    saveElementProperties() {
+        this.showNotification('Element properties saved', 'success');
+    }
+
+    deleteElement() {
+        if (this.selectedElement) {
+            this.selectedElement.element.remove();
+            this.canvasElements = this.canvasElements.filter(el => el !== this.selectedElement.element);
+            this.selectedElement = null;
+            this.nodeCounter = Math.max(0, this.nodeCounter - 1);
+            this.updateStats();
+            this.showNotification('Element deleted', 'info');
+            
+            // Clear properties panel
+            document.getElementById('propertiesForm').innerHTML = `
+                <div class="alert alert-info" role="alert">
+                    <i class="ph-info me-2"></i>
+                    Select an element to view its properties
+                </div>
+            `;
+        }
+    }
+
+    // Zoom functions
+    zoomIn() {
+        const canvas = document.getElementById('canvasContent');
+        const currentScale = canvas.style.transform.match(/scale\(([^)]+)\)/);
+        const scale = currentScale ? parseFloat(currentScale[1]) * 1.2 : 1.2;
+        canvas.style.transform = `scale(${Math.min(scale, 3)})`;
+        this.showNotification('Zoomed in', 'info');
+    }
+
+    zoomOut() {
+        const canvas = document.getElementById('canvasContent');
+        const currentScale = canvas.style.transform.match(/scale\(([^)]+)\)/);
+        const scale = currentScale ? parseFloat(currentScale[1]) / 1.2 : 0.8;
+        canvas.style.transform = `scale(${Math.max(scale, 0.3)})`;
+        this.showNotification('Zoomed out', 'info');
+    }
+
+    zoomToFit() {
+        const canvas = document.getElementById('canvasContent');
+        canvas.style.transform = 'scale(1)';
+        this.showNotification('Zoom reset', 'info');
+    }
+
+    undo() {
+        this.showNotification('Undo - Coming soon!', 'info');
+    }
+
+    redo() {
+        this.showNotification('Redo - Coming soon!', 'info');
     }
 
     saveWorkflow() {
         console.log('Saving workflow...');
+        const workflowData = {
+            elements: this.canvasElements.length,
+            timestamp: new Date().toISOString()
+        };
+        localStorage.setItem('odinsight_workflow', JSON.stringify(workflowData));
         this.showNotification('Workflow saved successfully', 'success');
     }
 
     executeWorkflow() {
+        if (this.canvasElements.length === 0) {
+            this.showNotification('No elements to execute', 'warning');
+            return;
+        }
         console.log('Executing workflow...');
         this.showNotification('Workflow execution started', 'info');
+        
+        // Simulate execution
+        setTimeout(() => {
+            this.showNotification('Workflow executed successfully', 'success');
+        }, 2000);
     }
 
     deployWorkflow() {
+        if (this.canvasElements.length === 0) {
+            this.showNotification('No elements to deploy', 'warning');
+            return;
+        }
         console.log('Deploying workflow...');
-        this.showNotification('Workflow deployed to Ansible Tower', 'success');
+        this.showNotification('Deploying to Ansible Tower...', 'info');
+        
+        // Simulate deployment
+        setTimeout(() => {
+            this.showNotification('Workflow deployed successfully', 'success');
+        }, 3000);
     }
 
     validateWorkflow() {
         console.log('Validating workflow...');
-        this.showNotification('Workflow validation passed', 'success');
-    }
-
-    loadSampleWorkflow() {
-        // Load a sample workflow for demonstration
-        console.log('Loading sample workflow...');
+        this.showNotification('Validating workflow...', 'info');
+        
+        // Simulate validation
         setTimeout(() => {
-            this.updateStats(3, 2);
-            this.showNotification('Sample workflow loaded', 'info');
+            if (this.canvasElements.length > 0) {
+                this.showNotification('Workflow validation passed', 'success');
+            } else {
+                this.showNotification('Workflow is empty', 'warning');
+            }
         }, 1000);
     }
 
-    updateStats(nodes = 0, connections = 0) {
+    handleQuickAction(action) {
+        switch(action) {
+            case 'Create':
+                this.addElementToCanvas('start');
+                break;
+            case 'Import':
+                this.showNotification('Import functionality coming soon!', 'info');
+                break;
+            case 'View':
+                this.showNotification('Analytics page coming soon!', 'info');
+                break;
+            case 'Configure':
+                this.showNotification('Settings page coming soon!', 'info');
+                break;
+            default:
+                console.log('Unknown action:', action);
+        }
+    }
+
+    updateStats(nodes = null, connections = null) {
+        const nodeCount = nodes !== null ? nodes : this.nodeCounter;
+        const connectionCount = connections !== null ? connections : this.connectionCounter;
+        
         const statsElement = document.querySelector('.workflow-stats');
         if (statsElement) {
             statsElement.innerHTML = `
-                <span><i class="ph-squares-four"></i> ${nodes} Nodes</span>
-                <span><i class="ph-arrows-horizontal"></i> ${connections} Connections</span>
+                <span><i class="ph-squares-four"></i> ${nodeCount} Nodes</span>
+                <span><i class="ph-arrows-horizontal"></i> ${connectionCount} Connections</span>
                 <span><i class="ph-clock"></i> Ready</span>
             `;
         }
@@ -600,7 +935,7 @@ class NetworkWorkflowBuilder {
         toast.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
         toast.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
         toast.innerHTML = `
-            ${message}
+            <i class="ph-info me-2"></i>${message}
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         `;
         
